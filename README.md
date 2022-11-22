@@ -1,4 +1,4 @@
-![weather.png](weather_asbt.png)
+![weather project](https://user-images.githubusercontent.com/111761417/203182271-24e1b47f-d14d-44fc-bc65-976773cf2baf.gif)
 
 # Unit 2: A Distributed Weather Station for ISAK
 
