@@ -8,7 +8,7 @@
 
 * Identify the audience
 * Identify the interest of the audience
-* WWhat is the audience doing and currently have (status quo)
+* What is the audience doing and currently have (status quo)
 * What's the problem with the status quo/what the audience currently has?
 * What's the need?
 
