@@ -6,12 +6,6 @@
 
 ## Problem definition
 
-* Identify the audience
-* Identify the interest of the audience
-* What is the audience doing and currently have (status quo)
-* What's the problem with the status quo/what the audience currently has?
-* What's the need?
-
 The head of a local school in Japan is interested in maintaining safe levels of humidity and temperature inside and outisde the residences. The school has started to measure manually the levels of humidity and temperature inside each room and outside the residence, however at the moment this method has become too time cosuming and tedious to keep track off. It is also difficult for the head of school to maintain organizaed and analize the data in an efficient manner. The school is in need of a low cost sensing device for humidity and temperature and a custom data script that processes and analyzes the samples acquired.
 
 ## Proposed Solution
@@ -40,11 +34,6 @@ Considering the budgetary constrains of the client and the hardware requirements
 
 # Criteria B: Design
 
-## System Diagram **SL**
-![](sysdim_sl.png)
-
-**Fig.1** shows the system diagram for the proposed solution (**SL**). The indoor variables will be measured using an Arduino microprocessor and the sensor DHT11 conencted to the local computer (Laptop) located inside a room. The outdoor variables will be requested to the remote server using a GET request to the API of the server at ```192.168.6.147/readings```. The local values are stored in a CSV database locally.
-
 ![](sysdim_hl.png)
 
 **Fig.2** shows the system diagram for the proposed solution (**HL**). The indoor variables will be measured using a Raspberry PI and four DHT11 sensors located inside a room. Four sensors are used to determine more precisely the physical values and include measurement uncertainty. The outdoor variables will be requested to the remote server using a GET request to the API of the server at ```192.168.6.147/readings```. The local values are stored in a CSV database locally and POST to the server using the API and TOKEN authentication. A laptop computer is used for remotely controlling the local Rasberry Pi using a Dekptop sharing application (VNC Viewer). (Optional) Data from the local raspberry is downloaded to the laptop for analysis and processing.
@@ -54,6 +43,8 @@ Considering the budgetary constrains of the client and the hardware requirements
 | Task No | Planned Action                                                | Planned Outcome                                                                                                 | Time estimate | Target completion date | Criterion |
 |---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
 | 1       | Write the Problem context                        | 10min         | Nov 22                 | A         |
+| 2.      | Draw system diagram for inside the room | 10min | Dec 1 | B
+| 3.      | Draw system diagram for outside the residence | 10min | Dec 1 | B
 
 ## Test Plan
 
