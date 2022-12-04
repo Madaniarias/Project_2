@@ -48,6 +48,7 @@ We will design and make a embeded system capable of measure the levels of humidi
 | 2      | Write the Desing statement.      | Explain in a consice and clear manner the purpose of the project to the client         | 5min  | Dec 1 | A
 | 3      | Draw system diagram for inside the room | To have a clear idea of the hardware and software requirements for the proposed solution for the inisde the room setting | 10min| Dec 1 | B
 | 4      | Draw system diagram for outside the residence | To have a clear idea of the hardware and software requirements for the proposed solution for the outside the residence setting | 10min | De 1 | B
+| 5.     | Build the MVP (minimun viable product) |   |  30min. | Dec 3. | C
 
 ## Test Plan
 
