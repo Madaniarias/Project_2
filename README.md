@@ -61,6 +61,7 @@ We will design and make a embeded system capable of measure the levels of humidi
 # Criteria C: Development
 
 ## List of techniques used
+* Outline, Define, and how it was used in the project.
 
 ## Development
 
