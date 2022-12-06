@@ -52,8 +52,11 @@ We will design and make a embeded system capable of measure the levels of humidi
 | 6      | Alpha Coding MVP (minimun valuable product) | Code the prototype to collect data from the sensors and print it to the terminal | 30min | Dec 3 | C
 | 7      | MVP Testing (Alpha Testing) | Test if the prototype collects data from the sensors and print it to the terminal | 5min. | Dec 3 | C
 | 8      | Assemble Embedded System Wiring | Complete set up of four DHT11 sensors on breadboard & raspberry pi with long wires able to reach all around the room | 5 min | Dec 6 | C 
-| 9      | Setup Raspberry Pi remote development with VS Code | / | 2 hours | Dec 6 | C
 
+
+* Code - Create lines of code for the data to be recorded to a CSV file - 10 minutes | Dec 6 
+* Setup Raspberry Pi remote development with VS Code | / | 2 hours | Dec 6 | C
+* Code - Create lines of code for the data to be sent to the server
 
 
 
