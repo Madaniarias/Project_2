@@ -48,10 +48,10 @@ We will design and make a embeded system capable of measure the levels of humidi
 | 2      | Write the Desing statement.      | Explain in a consice and clear manner the purpose of the project to the client         | 5min  | Dec 1 | A
 | 3      | Draw system diagram for inside the room | To have a clear idea of the hardware and software requirements for the proposed solution for the inisde the room setting | 10min| Dec 1 | B
 | 4      | Draw system diagram for outside the residence | To have a clear idea of the hardware and software requirements for the proposed solution for the outside the residence setting | 10min | De 1 | B
-| 5.     | Build MVP (minimun valuable product) | Set up Raspberry Pi on local desktop & VNC (virtual cloud network) |  30min. | Dec 3. | C
-| 6      | Alpha Coding MVP (minimun valuable product) |   | 30min | Dec 3 | C
-| 7.     | MVP Testing (Alpha Testing) | Testing if the prototype is able to read the data from the server | 5min. | Dec 3 | C
-| 8.     | Assamble Embedded System Wiring | Complete set up of four DHT11 sensors on breadboard & raspberry pi with long wires able to reach all around the room | 5 min | C 
+| 5      | Build MVP (minimun valuable product) | Set up Raspberry Pi on local desktop & VNC (virtual cloud network) |  30min. | Dec 3. | C
+| 6      | Alpha Coding MVP (minimun valuable product) | Code the prototype to collect data from the sensors and print it to the terminal | 30min | Dec 3 | C
+| 7      | MVP Testing (Alpha Testing) | Test if the prototype collects data from the sensors and print it to the terminal | 5min. | Dec 3 | C
+| 8      | Assamble Embedded System Wiring | Complete set up of four DHT11 sensors on breadboard & raspberry pi with long wires able to reach all around the room | 5 min | Dec 6 | C 
 
 
 
@@ -61,7 +61,6 @@ We will design and make a embeded system capable of measure the levels of humidi
 # Criteria C: Development
 
 ## List of techniques used
-* Outline, Define, and how it was used in the project.
 
 ## Development
 
