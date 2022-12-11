@@ -79,8 +79,8 @@ We will design and make a embeded system capable of measure the levels of humidi
 ## Computational Thinking
 
 # Criteria D: Functionality
-## Science Poster
-## Video
+The Science Poster, Comparative Analysis, and Video/Demo is stored in this Google Drive:
+
 
 [^1]: Industries, Adafruit. “DHT11 Basic Temperature-Humidity Sensor + Extras.” Adafruit Industries Blog RSS, https://www.adafruit.com/product/386.
 [^2]: Nelson, Carter. “Modern Replacements for DHT11 and dht22 Sensors.” Adafruit Learning System, https://learn.adafruit.com/modern-replacements-for-dht11-dht22-sensors/what-are-better-alternatives.
