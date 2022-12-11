@@ -46,8 +46,8 @@ We will design and make a embeded system capable of measure the levels of humidi
 # Criteria B: Design
 
 ![](sysdim_hl.png)
+![IMG_0128](https://user-images.githubusercontent.com/111761417/206886103-2d6fb313-4914-4985-910a-ecd367ed9be4.jpg)
 
-![](designdg.jpeg)
 **Fig.2** shows the system diagram for the proposed solution (**HL**). The indoor variables will be measured using a Raspberry PI and four DHT11 sensors located inside a room. Four sensors are used to determine more precisely the physical values and include measurement uncertainty. The outdoor variables will be requested to the remote server using a GET request to the API of the server at ```192.168.6.147/readings```. The local values are stored in a CSV database locally and POST to the server using the API and TOKEN authentication. A laptop computer is used for remotely controlling the local Rasberry Pi using a Dekptop sharing application (VNC Viewer). (Optional) Data from the local raspberry is downloaded to the laptop for analysis and processing.
 
 
