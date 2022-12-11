@@ -69,12 +69,14 @@ We will design and make a embeded system capable of measure the levels of humidi
 
 ## Test Plan
 
+## Flow Diagrams
+
 # Criteria C: Development
+## Existing Tools
 
-## List of techniques used
+## Sources
 
-## Development
-
+## Computational Thinking
 
 # Criteria D: Functionality
 ## Science Poster
