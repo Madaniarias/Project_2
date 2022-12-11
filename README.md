@@ -68,6 +68,14 @@ We will design and make a embeded system capable of measure the levels of humidi
 | 12     | Data Collection | Allow the embedded system - Raspberry Pi and its four DHT11 sensors - to collect temperature and humidity data in R4 Down Room A. | 48 hours | Dec 9 10pm to Dec 11 10pm | D 
 
 ## Test Plan
+| Test No | Type of Test                                                |  Date                                                                                               | Procedure | Expected Outcome |  |
+|---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
+| 1       | Functional: testing function validate_int_input                                         | Oct 9  | Open a file called test.py > import the function validate_int_input > ask the user for an input > print the input.         | It will print the input, which will be a number.                 |          |
+| 2.      | Functional: testing function validate_choice_input  |   Oct 9 | Open a file called test2.py > import the function validate_choice_input > ask the user for an input > print the input. | It will print the input, which will be a letter. | 
+| 3.      | Functional: testing function simple_login  | Oct 9 | Open a file called test3.py > import the function single_login > ask the user for an username and password > grant or deny access | Enter correct username and password will grant access, enter incorrect username and password will deny access 
+| 4.      | Non-Functional: Capabilty for the user to use program efficiently　　　　　　| Oct9             | Open crypto_wallet.py > aske the user to run it for 5 minutes > see how far it gets to use it.  | The user will use at least 5 out of options  | 
+|5.       | Non-Functional: Capability for the user to understand instructions of the program | Oct 9 | Open crypto_wallet.py > ask the user to run it for 5 minutes > see how many errors the user gets. | The user will get less than 3 errors.
+|6.       | Non-Functional: Capability for the user to run it with out having to exit the program | Oct 9 | Open crypto_wallet.py > ask the user to run it for 5 minutes > see how many time the user exits the program innecesarily. | The user will exit innecesarily no more than one time.
 
 ## Flow Diagrams
 
