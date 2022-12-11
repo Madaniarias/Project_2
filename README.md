@@ -2,6 +2,22 @@
 
 # Unit 2: A Distributed Weather Station for ISAK
 
+**Table of Contents**
+1. [Criteria A: Planning](#criteria-a-planning)
+   * [Problem definition](#problem-definition)
+   * [Proposed Solution](#proposed-solution)
+   * [Design statement](#design-statement)
+   * [Success Criteria](#success-criteria)
+1. [Criteria B: Design](#criteria-b-design)
+    * [Record of Tasks](#record-of-tasks)
+    * [Test Plan](#test-plan)
+1. [Criteria C: Development](#criteria-c-development)
+   * [List of techniques used](#list-of-techniques-used)
+   * [Development](#development)
+2. [Criteria D: Functionality](#criteria-d-functionality)
+   * [Science Poster](#science-poster)
+   * [Video](#video)
+
 ## Criteria A: Planning
 
 ## Problem definition
@@ -13,17 +29,10 @@ Considering the client requirements an adequate solution includes a low cost sen
 
 Considering the budgetary constrains of the client and the hardware requirements, the software tool that I proposed for this solution is Python. Python is open source, it is mature and supported in mutiple platforms (platform-independent) including macOS, Windows, Linux and can also be used to program the Arduino microprocessor [^5][^6]. In comparison to the alternative C or C++, which share similar features, Python is a High level programming language (HLL) with high abstraction [^7]. For example, memory management is automatic in Python whereas it is responsability of the C/C++ developer to allocate and free up memory [^7], this could result in faster applications but also memory problems. In addition a HLL language will allow me and future developers extend the solution or solve issues proptly.  
 
-**Design statement**
+## Design statement
 
 We will design and make a embeded system capable of measure the levels of humidity and temperature for a client who is the head of a local school in Japan. The project will be about designing a low cost sensing device for humidity and temperature and a custom data script that processes and analyzes the samples acquired and will ber constructed using the software Python 3.10.7. It will take about 3 weeks to make and will be evaluated according to the criteria below.
 
-[^1]: Industries, Adafruit. “DHT11 Basic Temperature-Humidity Sensor + Extras.” Adafruit Industries Blog RSS, https://www.adafruit.com/product/386. 
-[^2]: Nelson, Carter. “Modern Replacements for DHT11 and dht22 Sensors.” Adafruit Learning System, https://learn.adafruit.com/modern-replacements-for-dht11-dht22-sensors/what-are-better-alternatives.   
-[^3]:“How to Connect dht11 Sensor with Arduino Uno.” Arduino Project Hub, https://create.arduino.cc/projecthub/pibots555/how-to-connect-dht11-sensor-with-arduino-uno-f4d239.  
-[^4]:Team, The Arduino. “What Is Arduino?: Arduino Documentation.” Arduino Documentation | Arduino Documentation, https://docs.arduino.cc/learn/starting-guide/whats-arduino.  
-[^5]:Tino. “Tino/PyFirmata: Python Interface for the Firmata (Http://Firmata.org/) Protocol. It Is Compliant with Firmata 2.1. Any Help with Updating to 2.2 Is Welcome. the Capability Query Is Implemented, but the Pin State Query Feature Not Yet.” GitHub, https://github.com/tino/pyFirmata. 
-[^6]:Python Geeks. “Advantages of Python: Disadvantages of Python.” Python Geeks, 26 June 2021, https://pythongeeks.org/advantages-disadvantages-of-python/. 
-[^7]: Real Python. “Python vs C++: Selecting the Right Tool for the Job.” Real Python, Real Python, 19 June 2021, https://realpython.com/python-vs-cpp/#memory-management. 
 ## Success Criteria
 
 1. The solution provides a visual representation of the Humidity and Temperature values inside a dormitory (Local) and outside the house (Remote) for a period of minimum 48 hours. 
@@ -52,14 +61,11 @@ We will design and make a embeded system capable of measure the levels of humidi
 | 5      | Build MVP (minimun valuable product) | Set up Raspberry Pi on local desktop & VNC (virtual cloud network) |  30min. | Dec 3. | C
 | 6      | Alpha Coding MVP (minimun valuable product) | Code the prototype to collect data from the sensors and print it to the terminal | 30min | Dec 3 | C
 | 7      | MVP Testing (Alpha Testing) | Test if the prototype collects data from the sensors and print it to the terminal | 5min. | Dec 3 | C
-| 8      | Assemble Embedded System Wiring | Complete set up of four DHT11 sensors on breadboard & raspberry pi with long wires able to reach all around the room | 5 min | Dec 6 | C 
-
-
-* Code - Create lines of code for the data to be recorded to a CSV file - 10 minutes | Dec 6 
-* Setup Raspberry Pi remote development with VS Code | / | 2 hours | Dec 6 | C
-* Code - Create lines of code for the data to be sent to the server
-
-
+| 8      | Assemble Embedded System Wiring | Complete set up of four DHT11 sensors on breadboard & raspberry pi with long wires able to reach all around the room | 5 min | Dec 6 | B |
+| 9      | Setup remote development with Visual Studio Code | Remote Development enables a programmer to connect to a remote server, in this case the Raspberry Pi, access this server's storage, and work on coding seamlessly as if these files were saved in the programmer's desktop locally [^8]. | 30 minutes | Dec 7 | B 
+| 10     | Beta Coding | Write lines of code in Python that enables the Raspberry pi to read data from the four DHT11 sensors set up, upload these data to the [UWC ISAK Japan Weather Station Server]('192.168.6.142'), and save these data in a CSV file in the Raspoberry Pi' storage. | 5 hours | Dec 7 - 9 | C 
+| 11      | Beta Testing | Allow the Raspberry Pi to collect data, save these data locally in an assigned CSV file, and upload these data to the server. | 40 minutes | Dec 9 | D 
+| 12     | Data Collection | Allow the embedded system - Raspberry Pi and its four DHT11 sensors - to collect temperature and humidity data in R4 Down Room A. | 48 hours | Dec 9 10pm to Dec 11 10pm | D 
 
 ## Test Plan
 
@@ -71,5 +77,14 @@ We will design and make a embeded system capable of measure the levels of humidi
 
 
 # Criteria D: Functionality
+## Science Poster
+## Video
 
-A 7 min video demonstrating the proposed solution with narration
+[^1]: Industries, Adafruit. “DHT11 Basic Temperature-Humidity Sensor + Extras.” Adafruit Industries Blog RSS, https://www.adafruit.com/product/386.
+[^2]: Nelson, Carter. “Modern Replacements for DHT11 and dht22 Sensors.” Adafruit Learning System, https://learn.adafruit.com/modern-replacements-for-dht11-dht22-sensors/what-are-better-alternatives.
+[^3]:“How to Connect dht11 Sensor with Arduino Uno.” Arduino Project Hub, https://create.arduino.cc/projecthub/pibots555/how-to-connect-dht11-sensor-with-arduino-uno-f4d239.  
+[^4]:Team, The Arduino. “What Is Arduino?: Arduino Documentation.” Arduino Documentation | Arduino Documentation, https://docs.arduino.cc/learn/starting-guide/whats-arduino.
+[^5]:Tino. “Tino/PyFirmata: Python Interface for the Firmata (Http://Firmata.org/) Protocol. It Is Compliant with Firmata 2.1. Any Help with Updating to 2.2 Is Welcome. the Capability Query Is Implemented, but the Pin State Query Feature Not Yet.” GitHub, https://github.com/tino/pyFirmata.
+[^6]:Python Geeks. “Advantages of Python: Disadvantages of Python.” Python Geeks, 26 June 2021, https://pythongeeks.org/advantages-disadvantages-of-python/.
+[^7]: Real Python. “Python vs C++: Selecting the Right Tool for the Job.” Real Python, Real Python, 19 June 2021, https://realpython.com/python-vs-cpp/#memory-management.
+[^8]: Visual Studio Code Remote Development Frequently Asked Questions. 3 Nov. 2021, code.visualstudio.com/docs/remote/faq/.
