@@ -39,3 +39,9 @@ data["Sensor 1"]["temp"] = data["Sensor 1"]["temp"][1:]
 for k in data.keys():
     data[f"{k}"]["temp"]=data[f"{k}"]["temp"][:576]
     data[f"{k}"]["temp"]=data[f"{k}"]["humidity"][:576]
+
+#------PLOTS------
+#RAW DATA
+#for k in data.keys():
+#    plt.plot(data[f"{k}"]["temp"])
+#plt.show()
