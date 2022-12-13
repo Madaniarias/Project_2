@@ -1,28 +1,41 @@
+import requests
 from matplotlib import pyplot as plt
-import warnings
-import numpy as np
-warnings.simplefilter('ignore')
 
-sensorA = [16,24,24,9,23,26,26,23,25,14]
-sensorB = [2,19,25,10,11,24,17,7,24,17]
-sensorC = [15,11,24,21,6,2,18,27,1,16]
-sensorD = [9,19,29,11,13,20,7,13,20,14]
+req = requests.get('http://192.168.6.142/readings')
+data1 = req.json()
+readings = data1['readings'][0]
 
-# Mean and Standard Deviation
-mean,std,max2,min2 = [],[],[],[]
-samples = np.arange(1,11)
-#ERROR BARS
-for i in range(10):
-    data = [sensorA[i],sensorB[i],sensorC[i]]
-    mean.append(np.mean(data))
-    std.append(np.std(data))
-    max2.append(max(data))
-    min2.append(min(data))
+pins = {'Sensor 1':[452,465],'Sensor 2':[464,466],'Sensor 3':[467,468],'Sensor 4':[469,471]}
+data = {'Sensor 1':{'temp':[],'humidity':[]},'Sensor 2':{'temp':[],'humidity':[]}, 'Sensor 3':{'temp':[],'humidity':[]},'Sensor 4':{'temp':[],'humidity':[]}}
 
-plt.errorbar(samples,mean,std,fmt="o")
-#PLOT - ERROR BARS & FILL
-plt.fill_between(samples,max2,min2,alpha=0.5,linewidth=0, color='#8ecae6')
-plt.ylabel('Relative Humidity')
-plt.xlabel('Hour')
-plt.title('Humidity')
-plt.show()
+for sample in readings:
+    for k in data.keys():
+        if sample['sensor_id'] == pins[f'{k}'][0]:
+            data[f'{k}']['temp'].append(sample['value'])
+        elif sample['sensor_id'] == pins[f'{k}'][1]:
+            data[f'{k}']['humidity'].append(sample['value'])
+
+for k in data.keys():
+    data[f'{k}']['temp'] = data[f'{k}']['temp'][44:]
+    data[f'{k}']['humidity'] = data[f'{k}']['humidity'][43:]
+
+# GET EVERY TWO POINTS
+#print(data['Sensor 1']['temp'])
+for k in data.keys():
+    templist = []
+    humlist = []
+    for i in range(0,len(data[f'{k}']['temp'])):
+        if i%2==0:
+            #print(data[f'{k}']['temp'][i])
+            templist.append(data[f'{k}']['temp'][i])
+    for i in range(0, len(data[f'{k}']['humidity'])):
+        if i % 2 == 0:
+            humlist.append(data[f'{k}']['humidity'][i])
+    data[f'{k}']['temp'] = templist
+    data[f'{k}']['humidity'] = humlist
+
+data["Sensor 1"]["temp"] = data["Sensor 1"]["temp"][1:]
+
+for k in data.keys():
+    data[f"{k}"]["temp"]=data[f"{k}"]["temp"][:576]
+    data[f"{k}"]["temp"]=data[f"{k}"]["humidity"][:576]
