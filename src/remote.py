@@ -33,69 +33,103 @@ temp = times(temp)
 #fig = plt.figure((5,7))
 
 #MOVING AVERAGE SMOOTHING
-window=12 #WINDOW IS 12 SO THAT EVERY POINT IS A SUMMARY OF THE TEMP & HUMIDITY PER HOUR
-def smoothing(data,window):
-    data_ma_mph = []
-    data_ma_sth = []
-    for t in range(0,len(data),window):
-        t_hour = data[t:t+window]
-        data_ma_mph.append(sum(t_hour) / len(t_hour))
-        data_ma_sth.append(np.std(t_hour))
-    return data_ma_mph, data_ma_sth
+# window=12 #WINDOW IS 12 SO THAT EVERY POINT IS A SUMMARY OF THE TEMP & HUMIDITY PER HOUR
+# def smoothing(data,window):
+#     data_ma_mph = []
+#     data_ma_sth = []
+#     for t in range(0,len(data),window):
+#         t_hour = data[t:t+window]
+#         data_ma_mph.append(sum(t_hour) / len(t_hour))
+#         data_ma_sth.append(np.std(t_hour))
+#     return data_ma_mph, data_ma_sth
 
-#x = np.arange(0,len(temp)+1,4)
-#print(x)
+x = np.arange(0,len(temp)+1,4)
+print(x)
 
-print(len(hum))
-print(len(smoothing(hum,window)[0]))
-plt.subplot(3,2,1)
-plt.plot(hum)
-plt.title('Humidity')
-plt.ylabel('Humidity')
-lbl=[]
-for i in range(0,48):
-    lbl.append(str(i))
-print(lbl)
-txs=[]
-for i in range():
-    txs.append()
-print(np.arange(0,len(hum)+11,12))
-plt.xticks(labels=lbl)
-plt.xlabel('Hours since Dec 9, 9:35pm')
+# print(len(hum))
+# print(len(smoothing(hum,window)[0]))
+# plt.plot(hum)
+# plt.title('Humidity')
+# plt.ylabel('Humidity')
+# plt.xticks(range(0,len(hum)+12,144), range(0,49,12))
+# plt.xlabel('Hours since Dec 9, 9:35pm')
+#
+# plt.subplot(2,2,1)
+# plt.plot(hum)
+# plt.title('Humidity')
+# plt.ylabel('Humidity (%)')
+# plt.xticks(range(0,len(hum)+12,144), range(0,49,12))
+# plt.xlabel('Hours since Dec 9, 10pm')
+#
+# plt.subplot(2,2,2)
+# plt.title('Humidity Data Smoothed')
+# plt.plot(np.arange(len(smoothing(hum,window)[0])), smoothing(hum,window)[0])
+# plt.xticks(range(0,len(smoothing(hum,window)[0])+1,12))
+# plt.ylabel('Humidity (%)')
+# plt.xlabel('Hours since Dec 9, 10pm')
+#
+# plt.subplot(2,2,3)
+# plt.plot(temp)
+# plt.title('Temperature')
+# plt.ylabel('Temperature (C)')
+# plt.xlabel('Hours since Dec 9, 10pm')
+# plt.xticks(range(0,len(hum)+12,144), range(0,49,12))
+#
+# plt.subplot(2,2,4)
+# plt.title('Temperature Data Smoothed')
+# plt.ylabel('Temperature (C)')
+# plt.plot(np.arange(len(smoothing(temp,window)[0])), smoothing(temp,window)[0])
+# plt.xticks(range(0,len(smoothing(hum,window)[0])+1,12))
+# plt.xlabel('Hours since Dec 9, 10pm')
 
-plt.subplot(3,2,2)
-plt.title('Humidity Data Smoothed')
-plt.plot(np.arange(len(smoothing(hum,window)[0])), smoothing(hum,window)[0])
-plt.xticks(range(0,len(smoothing(hum,window)[0])+1,12))
-plt.ylabel('Humidity')
-plt.xlabel('Hours since Dec 9, 9:35pm')
+# plt.subplot(3,2,5)
+# plt.plot(temp, label='Humidity')
+# plt.plot(hum, label='Temperature')
+# plt.xticks(range(0,len(hum)+12,144), range(0,49,12))
+# plt.legend()
+#
+# plt.subplot(3,2,6)
+# counts,bins = np.histogram(hum)
+# plt.stairs(counts,bins,label="Humidity")
+# counts,bins = np.histogram(temp)
+# plt.stairs(counts,bins,label="Temperature")
+# plt.title('Temperature & Humidity Histogram')
+# plt.xticks(range(0,len(smoothing(hum,window)[0])+1,12))
 
-plt.subplot(3,2,3)
-plt.plot(temp)
-plt.title('Temperature')
-plt.ylabel('Temperature')
-plt.xticks(range(0,len(smoothing(temp,window)[0])+1,4))
-plt.xlabel('Hours since Dec 9, 9:35pm')
+# plt.plot(temp, label='Humidity')
+# plt.plot(hum, label='Temperature')
+# plt.title("Outdoor Humidity & Temperature")
+# plt.xticks(range(0,len(hum)+12,144), range(0,49,12))
+# plt.xlabel('Hours since Dec 9, 10pm')
 
-plt.subplot(3,2,4)
-plt.title('Temperature Data Smoothed')
-plt.ylabel('Temperature')
-plt.plot(np.arange(len(smoothing(temp,window)[0])), smoothing(temp,window)[0])
-plt.xticks(range(0,len(smoothing(hum,window)[0])+1,12))
-plt.xlabel('Hours since Dec 9, 9:35pm')
 
-plt.subplot(3,2,5)
-plt.plot(temp, label='Humidity')
-plt.plot(hum, label='Temperature')
-plt.legend()
+# counts,bins = np.histogram(hum)
+# plt.stairs(counts,bins,label="Humidity")
+# counts,bins = np.histogram(temp)
+# plt.stairs(counts,bins,label="Temperature")
+# plt.title('Temperature & Humidity Histogram')
+# plt.xticks(range(0,len(smoothing(hum,window)[0])+1,12))
 
-plt.subplot(3,2,6)
-counts,bins = np.histogram(hum)
-plt.stairs(counts,bins,label="Humidity")
-counts,bins = np.histogram(temp)
-plt.stairs(counts,bins,label="Temperature")
-plt.title('Temperature & Humidity Histogram')
 
-plt.legend()
+# plt.plot(hum)
+# plt.title('Humidity')
+# plt.ylabel('Humidity (%)')
+# plt.xticks(range(0,len(hum)+12,144), range(0,49,12))
+# plt.xlabel('Hours since Dec 9, 10pm')
+
+#--------------------PLOT TEMP & HUM MAX & MIN
+# plt.plot(temp)
+# print(max(temp))
+# print(min(temp))
+# plt.title("Outdoor Temperature")
+# plt.hlines(y=max(temp), label="Maximum", xmin=0,xmax=565, colors='darkorange')
+# plt.hlines(y=min(temp), label="Minimum", xmin=0,xmax=565, colors='lime')
+# plt.xticks(range(0,len(temp)+12,144), range(0,49,12))
+# plt.yticks(range(13,max(temp)+1,2))
+# plt.ylabel('Temperature (C)')
+# plt.xlabel('Hours After Dec 9, 2022 10pm')
+# plt.legend(loc='center left')
+
+
 plt.tight_layout()
 plt.show()
