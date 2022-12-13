@@ -67,9 +67,41 @@ We will design and make a embeded system capable of measure the levels of humidi
 | 11      | Beta Testing | Allow the Raspberry Pi to collect data, save these data locally in an assigned CSV file, and upload these data to the server. | 40 minutes | Dec 9 | D 
 | 12     | Data Collection | Allow the embedded system - Raspberry Pi and its four DHT11 sensors - to collect temperature and humidity data in R4 Down Room A. | 48 hours | Dec 9 10pm to Dec 11 10pm | D 
 
-## Test Plan
-
 ## Flow Diagrams
+
+# ACCESSING DATA
+
+![Diagrams Cs Project 2-2](https://user-images.githubusercontent.com/111761417/207186556-22b2b4cb-5665-4f2c-9154-732065d628f3.jpg)
+
+**Fig 3.**　The figure shows  the flow diagram used to access the data from the server
+
+# EXPLANATION OF ACCESING DATA
+
+![Diagrams Cs Project 2-3 (1)](https://user-images.githubusercontent.com/111761417/207186937-1e3ec6c0-0bc1-4fe0-9af4-95bc42a34133.jpg)
+
+**Fig 4.**　The figure shows the explanation of each step for the flow diagram used to access the data from the server
+
+# GETTING CODE FROM SERVER DATA DURING THE SPECIFIC TIME PERIOD NEEDED
+
+![Diagrams Cs Project 2-4](https://user-images.githubusercontent.com/111761417/207187111-0c35d412-e6cf-439f-a2d6-c72a3633af71.jpg)
+
+**Fig 5.**　The figure shows for the flow diagram used to getting the code from server data during the 48 hours requiered for the project.
+
+# EXPLANATION GETTING CODE FROM SERVER DATA DURING THE SPECIFIC TIME PERIOD NEEDED
+
+![Diagrams Cs Project 2-5](https://user-images.githubusercontent.com/111761417/207187169-9db339d9-b11f-41c5-b238-a157a9909693.jpg)
+
+**Fig 6.**　The figure shows the explanation of each step for the flow diagram used to getting the code from server data during the 48 hours requiered for the project.
+
+## Test Plan
+| Test No | Type of Test                                                |  Date                                                                                               | Procedure | Expected Outcome |  |
+|---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
+| 1       | Functional: Testing ability of Raspberry Pi to collect data from the server  | Dec 5 | Connect Raspberry Pi to computer > Open terminal of Raspberry Pi > Open Project.py file > run the program Python project.py. | The Raspberry Pi is able to collect the Temperature and Humidity data from the server in intervals of 5 min.                | 
+| 2.      | Functional: Testing ability of Raspberry Pi to collect data from the sensors  |  Dec 5 | Connect Raspberry Pi to computer > Open terminal of Raspberry Pi > Open Project.py file > run the program Python project.py. | The Raspberry Pi is able to collect the Temperature and Humidity data from the sensors in intervals of 5 min without printing message error after more than 3 readings| 
+| 3.      | Functional: Getting code from server data during specific time recorded started  | Dec 11 | Call function times that will determine if tha data was taken from a specfic time period needed > run the program Python project.py| Getting the reading only for the time period requested (48 hours).  
+| 4.      | Non-Functional: Capabilty for the user to understand the humidity and temperature indoor and outdoor graphs independently| Dec 11           | Open project.py > ask the user to run it > see how much does it take the user to figure the graph out.| The user will understand the graph in less than 3 min  | 
+|5.       | Non-Functional: Capability for the user to understand the humidity and temperature indoor and outdoor graphs comparison| Dec 11 | Open project.py > ask the user to run it > see how much does it take the user to understand the comparison through the model proposed. | The user will understand the graph in less than 3 min.
+|6.       | Non-Functional: Capability for the user to to understand the humidity and temperature prediction graph | Dec 11 | Open project.py > ask the user to run it > see how much does it take the user to understand the prediction for the next 12 subsequent hours. | The user will understand the graph in less than 3 min.
 
 # Criteria C: Development
 ## Existing Tools
@@ -79,8 +111,8 @@ We will design and make a embeded system capable of measure the levels of humidi
 ## Computational Thinking
 
 # Criteria D: Functionality
-## Science Poster
-## Video
+The Science Poster, Comparative Analysis, and Video/Demo is stored in this Google Drive:
+
 
 [^1]: Industries, Adafruit. “DHT11 Basic Temperature-Humidity Sensor + Extras.” Adafruit Industries Blog RSS, https://www.adafruit.com/product/386.
 [^2]: Nelson, Carter. “Modern Replacements for DHT11 and dht22 Sensors.” Adafruit Learning System, https://learn.adafruit.com/modern-replacements-for-dht11-dht22-sensors/what-are-better-alternatives.
