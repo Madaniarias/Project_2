@@ -40,7 +40,9 @@ for k in data.keys():
     data[f"{k}"]["temp"]=data[f"{k}"]["temp"][:576]
     data[f"{k}"]["temp"]=data[f"{k}"]["humidity"][:576]
 
+print(data)
 #------PLOTS------
+
 #RAW DATA
 #for k in data.keys():
 #    plt.plot(data[f"{k}"]["temp"])

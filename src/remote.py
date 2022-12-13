@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import requests
 import numpy as np
+import warnings
+warnings.simplefilter('ignore')
 
 req = requests.get('http://192.168.6.142/readings')
 data = req.json()
@@ -41,23 +43,46 @@ def smoothing(data,window):
         data_ma_sth.append(np.std(t_hour))
     return data_ma_mph, data_ma_sth
 
+#x = np.arange(0,len(temp)+1,4)
+#print(x)
 
-
+print(len(hum))
+print(len(smoothing(hum,window)[0]))
 plt.subplot(3,2,1)
 plt.plot(hum)
 plt.title('Humidity')
+plt.ylabel('Humidity')
+lbl=[]
+for i in range(0,48):
+    lbl.append(str(i))
+print(lbl)
+txs=[]
+for i in range():
+    txs.append()
+print(np.arange(0,len(hum)+11,12))
+plt.xticks(labels=lbl)
+plt.xlabel('Hours since Dec 9, 9:35pm')
 
 plt.subplot(3,2,2)
-plt.title('Humidity Smoothed')
+plt.title('Humidity Data Smoothed')
 plt.plot(np.arange(len(smoothing(hum,window)[0])), smoothing(hum,window)[0])
+plt.xticks(range(0,len(smoothing(hum,window)[0])+1,12))
+plt.ylabel('Humidity')
+plt.xlabel('Hours since Dec 9, 9:35pm')
 
 plt.subplot(3,2,3)
 plt.plot(temp)
 plt.title('Temperature')
+plt.ylabel('Temperature')
+plt.xticks(range(0,len(smoothing(temp,window)[0])+1,4))
+plt.xlabel('Hours since Dec 9, 9:35pm')
 
 plt.subplot(3,2,4)
-plt.title('Temperature Smoothed')
+plt.title('Temperature Data Smoothed')
+plt.ylabel('Temperature')
 plt.plot(np.arange(len(smoothing(temp,window)[0])), smoothing(temp,window)[0])
+plt.xticks(range(0,len(smoothing(hum,window)[0])+1,12))
+plt.xlabel('Hours since Dec 9, 9:35pm')
 
 plt.subplot(3,2,5)
 plt.plot(temp, label='Humidity')
