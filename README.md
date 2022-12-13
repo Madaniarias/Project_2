@@ -69,6 +69,30 @@ We will design and make a embeded system capable of measure the levels of humidi
 
 ## Flow Diagrams
 
+# ACCESSING DATA
+
+![Diagrams Cs Project 2-2](https://user-images.githubusercontent.com/111761417/207186556-22b2b4cb-5665-4f2c-9154-732065d628f3.jpg)
+
+**Fig 3.**　The figure shows  the flow diagram used to access the data from the server
+
+# EXPLANATION OF ACCESING DATA
+
+![Diagrams Cs Project 2-3 (1)](https://user-images.githubusercontent.com/111761417/207186937-1e3ec6c0-0bc1-4fe0-9af4-95bc42a34133.jpg)
+
+**Fig 4.**　The figure shows the explanation of each step for the flow diagram used to access the data from the server
+
+# GETTING CODE FROM SERVER DATA DURING THE SPECIFIC TIME PERIOD NEEDED
+
+![Diagrams Cs Project 2-4](https://user-images.githubusercontent.com/111761417/207187111-0c35d412-e6cf-439f-a2d6-c72a3633af71.jpg)
+
+**Fig 5.**　The figure shows for the flow diagram used to getting the code from server data during the 48 hours requiered for the project.
+
+# EXPLANATION GETTING CODE FROM SERVER DATA DURING THE SPECIFIC TIME PERIOD NEEDED
+
+![Diagrams Cs Project 2-5](https://user-images.githubusercontent.com/111761417/207187169-9db339d9-b11f-41c5-b238-a157a9909693.jpg)
+
+**Fig 6.**　The figure shows the explanation of each step for the flow diagram used to getting the code from server data during the 48 hours requiered for the project.
+
 ## Test Plan
 | Test No | Type of Test                                                |  Date                                                                                               | Procedure | Expected Outcome |  |
 |---------|---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
