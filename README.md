@@ -113,6 +113,7 @@ We will design and make a embeded system capable of measure the levels of humidi
 
 # Criteria D: Functionality
 The Science Poster, Comparative Analysis, and Video/Demo is stored in this Google Drive:
+https://drive.google.com/drive/folders/1Kz8aMAfJCHmsgjQVhcB54h2y-usvIOQJ?usp=sharing
 
 
 [^1]: Industries, Adafruit. “DHT11 Basic Temperature-Humidity Sensor + Extras.” Adafruit Industries Blog RSS, https://www.adafruit.com/product/386.
