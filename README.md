@@ -117,30 +117,30 @@ We will design and make a embeded system capable of measure the levels of humidi
 
 ## Existing Tools
 
--For loops
--Functions
--While loops
--If statements
--Unicodes (color)
--Libraries: Matplotlib, Numpy, Datetime, Requests, Adafruit_DHT
--Graphical desktop-sharing system: VCN Viewer
--API server
--CVS files
--Pycharm
+- For loops
+- Functions
+- While loops
+- If statements
+- Unicodes (color)
+- Libraries: Matplotlib, Numpy, Datetime, Requests, Adafruit_DHT
+- Graphical desktop-sharing system: VCN Viewer
+- API server
+- CVS files
+- Pycharm
 
 ## Techniques applied
 
--Matplotlib library for plotting graphs
--Numpy library for mathematical processes and equations
--Using Graphical desktop-sharing system VCN Viewer to work with Raspberry Pi 4
--Logging in to and reading data from an online api server and posting data to it.
--Datetime library to access times
--Requests library to request data from server
--Reading/Appending/writting csv files
--Adafruit_DHT to wrok with Adafruit DHT series sensors
--Plotting graph for median, mean, maximum, minimum, standard deviation and a non linear model using python.
--Smoothing the data form teh graphs to get a easier to understand graph.
--Using dictionaries and keys to store specific data and retrieve it when necessary
+- Matplotlib library for plotting graphs
+- Numpy library for mathematical processes and equations
+- Using Graphical desktop-sharing system VCN Viewer to work with Raspberry Pi 4
+- Logging in to and reading data from an online api server and posting data to it.
+- Datetime library to access times
+- Requests library to request data from server
+- Reading/Appending/writting csv files
+- Adafruit_DHT to wrok with Adafruit DHT series sensors
+- Plotting graph for median, mean, maximum, minimum, standard deviation and a non linear model using python.
+- Smoothing the data form teh graphs to get a easier to understand graph.
+- Using dictionaries and keys to store specific data and retrieve it when necessary
 
 ## Sources
 
