@@ -64,7 +64,7 @@ We will design and make a embeded system capable of measure the levels of humidi
 | 8      | Assemble Embedded System Wiring | Complete set up of four DHT11 sensors on breadboard & raspberry pi with long wires able to reach all around the room | 5 min | Dec 6 | B |
 | 9      | Setup remote development with Visual Studio Code | Remote Development enables a programmer to connect to a remote server, in this case the Raspberry Pi, access this server's storage, and work on coding seamlessly as if these files were saved in the programmer's desktop locally [^8]. | 30 minutes | Dec 7 | B 
 | 10     | Beta Coding | Write lines of code in Python that enables the Raspberry pi to read data from the four DHT11 sensors set up, upload these data to the [UWC ISAK Japan Weather Station Server]('192.168.6.142'), and save these data in a CSV file in the Raspoberry Pi' storage. | 5 hours | Dec 7 - 9 | C 
-| 11      | Beta Testing | Allow the Raspberry Pi to collect data, save these data locally in an assigned CSV file, and upload these data to the server. | 40 minutes | Dec 9 | D 
+| 11      | Alpha-Testig | Allow the Raspberry Pi to collect data, save these data locally in an assigned CSV file, and upload these data to the server. | 40 minutes | Dec 9 | D 
 | 12     | Data Collection | Allow the embedded system - Raspberry Pi and its four DHT11 sensors - to collect temperature and humidity data in R4 Down Room A. | 48 hours | Dec 9 10pm to Dec 11 10pm | D 
 | 13    | Making mean graphs | Create a piece of code that is able to plot the mean for the temperature and humidity graphs for inside and outside the room separately| 30 min. | Dec 11 | C
 | 14    | Making median graphs | Create a piece of code that is able to plot the median for the temperature and humidity graphs for inside and outside the room separately| 30 min. | Dec 11 | C
@@ -73,8 +73,9 @@ We will design and make a embeded system capable of measure the levels of humidi
 | 17    | Making comparison graphs for the means of temperature inside and outside | Create a piece of code that is able to plot the comparison graphs for the temperature inside and outside the room | 30 min. | Dec 12 | C
 | 18    | Making comparison graphs for the means of humidity inside and outside | Create a piece of code that is able to plot the comparison graphs for the humidity inside and outside the room | 30 min. | Dec 12 | C
 | 19.   | Creating non-linear model for comparison graphs | After analysing the comparison graphs of the mean of the temperature from inside and outside and the the comparison graph of the mean of the humidity from inside and otside, use a non-linear model to create a realtion between the data from inside and outside | 45 min | Dec 12 | C
-| 20.  | Beta testing | Run the code for the graphs and identify possible errors to improve the code | 25 min | Dec 12 | C
+| 20.  | Alpha-Testig | Run the code for the graphs and identify possible errors to improve the code | 25 min | Dec 12 | C
 | 21.  | Creating science poster | Summarizing in a science poster the results obtained from the data plotting: identify methods, reach conclusions and establish recommendations for improvement | 1 hour. | Dec 12 | D
+| 22   | Filming explanation videos | Creating a video about the functionality of the code, the explanation and analysis of the results and presentation of the scientific poster and graphs | 1 hour | Dec 12 | D
 
 
 ## Flow Diagrams
@@ -102,6 +103,16 @@ We will design and make a embeded system capable of measure the levels of humidi
 ![Diagrams Cs Project 2-5](https://user-images.githubusercontent.com/111761417/207187169-9db339d9-b11f-41c5-b238-a157a9909693.jpg)
 
 **Fig 6.**　The figure shows the explanation of each step for the flow diagram used to getting the code from server data during the 48 hours requiered for the project.
+
+### SMOOTHING
+
+
+
+**Fig 7.**　The figure shows for the flow diagram used to smooth the data obtained from server data during the 48 hours requiered for the project when plotting graphs.
+
+
+
+**Fig 8.**　The figure shows the explanation of each step for the flow diagram used to smooth the data obtained from server data during the 48 hours requiered for the project when plotting graphs.
 
 ## Test Plan
 | Test No | Type of Test                                                |  Date                                                                                               | Procedure | Expected Outcome |  |
