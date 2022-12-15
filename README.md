@@ -178,7 +178,11 @@ By Analizing the graphs plotted it can be said that:
 
 ![9953676F-0D99-4284-8297-1E2570517C04](https://user-images.githubusercontent.com/111761417/207796687-b4ac7e3b-de05-489c-956f-e69b67f20d38.jpeg)
 
-**Fig 10.** 
+**Fig 10.** The following images presents a graph for the smoothed indoor average temperature in the local server. The error bars are based on standard deviation and the minimum and Maximum of all four indoor sensors are shown through the fill.inbetween plot. The smoothing window is 12 beacause the server collects data every 5 minutes.
+
+By Analizing the graphs plotted it can be said that:
+- Becuase most of the error bars are overlaping, we can say that the data obtained from all sesors does not differ that much from one another so, consequently, and avergae could be used.
+
 
 ## Remote server
 
