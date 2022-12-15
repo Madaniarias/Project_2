@@ -210,14 +210,15 @@ By Analizing the graphs plotted it can be more accuratly determined the maximum 
 
 **Fig 13.** The following image present a graph for the mean of the temperature in the remote server server during the 48 hour data collection period.
 
-By Analizing the graphs plotted it can be more accuratly determined the maximum and minimum values for temperature and humidity in the remote server:
+By Analizing the graphs plotted it can be said that:
+- The value for the median is 21°C.
 
 ![Screen Shot 2022-12-15 at 17 26 36](https://user-images.githubusercontent.com/111761417/207810020-8a1e1f07-76fc-4032-bff4-40910dc8d972.png)
 
 **Fig 14.** The following image present a graph for the mean of the humidity in the remote server server during the 48 hour data collection period.
 
-By Analizing the graphs plotted it can be more accuratly determined the maximum and minimum values for temperature and humidity in the remote server:
-
+By Analizing the graphs plotted it can be said that:
+- The value for the median is 33%.
 
 # Criteria D: Functionality
 The Science Poster, Comparative Analysis, and Video/Demo is stored in this Google Drive:
