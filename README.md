@@ -181,7 +181,7 @@ By Analizing the graphs plotted it can be said that:
 ### HUMIDITY & TEMPERATURE RAW DATA PLOTTING
 
 ![B6B1D161-BB55-4790-8EE4-BFE5CE2C9951](https://user-images.githubusercontent.com/111761417/207772323-cc870b6e-dfca-4188-9b9e-3e20d534b0b1.jpeg)
-**Fig 9.** The following images presents a set of four graphs related to the humidity and temperature in the remote server server. The two graphs on top represent the humidity data collected by the sensor in the remote server during the 48 hour data collection period and next to it the grpah of the same data smoothed. Similarly, the two graphs on the bottom represent the temperature data collected by the sensor in the remote server during 48 hour the data collection period and next to it the grpah of the same data smoothed.
+**Fig 9.** The following image presents a set of four graphs related to the humidity and temperature in the remote server server. The two graphs on top represent the humidity data collected by the sensor in the remote server during the 48 hour data collection period and, next to it, the grpah for the same data smoothed. Similarly, the two graphs on the bottom represent the temperature data collected by the sensor in the remote server during 48 hour the data collection period and, next to it, the grpah of the same data smoothed.
 
 ### 
 
