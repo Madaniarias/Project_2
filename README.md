@@ -220,7 +220,7 @@ By Analizing the graphs plotted it can be said that:
 By Analizing the graphs plotted it can be said that:
 - The value for the median is 33%.
 
-## Compariosn between Local and Remote servers
+## Comparisons between Local and Remote servers
 
 ### OUTDOOR VS. INDOOR AVERAGE TEMPERATURE AND HUMIDITY
 
@@ -231,14 +231,14 @@ By Analizing the graphs plotted it can be said that:
 By Analizing the graphs plotted it can be said that:
 - The temperature inside tended to be lower than outside due to the heaters inside the houses.
 - The temperature inside tended to be more consistent than outside because the conditions inside the room where almost the same during the data collection period (windonds closed, same temperature in heater, etc) whereas outside it was more incosistent due to the cnahe in weather conditions (snow, rain, sun, etc)
-
-![Screen Shot 2022-12-15 at 17 26 36](https://user-images.githubusercontent.com/111761417/207866966-a96a7ab8-af68-4a16-af05-bccacf4329fe.png)
-
+- The humidity inside the rooma was lower than the humidity outside the room.
 
 
+### CURVE FIT OUTDOOR TEMPERATURE
 
+![70FFA93E-7CE1-4B2E-B722-E3B3CB610781](https://user-images.githubusercontent.com/111761417/207867607-a57cb26c-3c27-4247-85f7-4964a6778e65.jpeg)
 
-### CURVE FIT
+**Fig 16.** The following image presents a graph plotting for the outdoor temperature during the 48 hour data collection period. Three trials were done with the Polynomial model to determine the best fit for the representation of the graph (Deg:3, Deg:4, Deg:5). For matters of this graph, the model for the quartic Polynomial model (Deg: 4) is preferred.
 
 
 # Criteria D: Functionality
