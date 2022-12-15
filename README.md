@@ -204,7 +204,10 @@ By Analizing the graphs plotted it can be more accuratly determined the maximum 
 - The minimum temperature recorded during the 48 hours data collection period in the local server was 13°C.
 - The maximum temperature recorded during the 48 hours data collection period in the local server was 26°C.
 
-### 
+### MEDIAN FOR TEMPERATURE AND HUMIDITY
+
+<img width="740" alt="Untitled" src="https://user-images.githubusercontent.com/111761417/207808810-75be59cf-6be7-4182-96a2-7ce3657ec265.png">
+
 
 # Criteria D: Functionality
 The Science Poster, Comparative Analysis, and Video/Demo is stored in this Google Drive:
