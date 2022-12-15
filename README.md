@@ -233,13 +233,17 @@ By Analizing the graphs plotted it can be said that:
 - The temperature inside tended to be more consistent than outside because the conditions inside the room where almost the same during the data collection period (windonds closed, same temperature in heater, etc) whereas outside it was more incosistent due to the cnahe in weather conditions (snow, rain, sun, etc)
 - The humidity inside the rooma was lower than the humidity outside the room.
 
-
 ### CURVE FIT OUTDOOR TEMPERATURE
 
 ![70FFA93E-7CE1-4B2E-B722-E3B3CB610781](https://user-images.githubusercontent.com/111761417/207867607-a57cb26c-3c27-4247-85f7-4964a6778e65.jpeg)
 
 **Fig 16.** The following image presents a graph plotting for the outdoor temperature during the 48 hour data collection period. Three trials were done with the Polynomial model to determine the best fit for the representation of the graph (Deg:3, Deg:4, Deg:5). For matters of this graph, the model for the quartic Polynomial model (Deg: 4) is preferred.
 
+### MODEL INDOOR TEMPERATURE AND HUMIDITY + PREDICTIONS
+
+![32B55420-CCFB-44A5-A9A5-97AF875D39FD](https://user-images.githubusercontent.com/111761417/207895232-58673ae7-deb1-40ac-b88b-334167a8a31a.jpeg)
+
+**Fig 17.** The following image presents a set of graphs for the indoor temperature and humidity during the 48 hour data collection period. A quatric polynomial model was used when plotting the graphs. Additionally, the predictions for the next 12 hours are recorded in the graphs.
 
 # Criteria D: Functionality
 The Science Poster, Comparative Analysis, and Video/Demo is stored in this Google Drive:
