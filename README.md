@@ -169,7 +169,7 @@ By Analizing the graphs plotted it can be said that:
 **Fig 9.** The following images presents a series of six graphs related to the humidity in the local server. Firstly, the raw data for each sensor was plotted. Aditionally, a graph with all the raw data from each sensor was added to identify the level of disparity amongst the raw data for the humidity there is for the raw data in the local server. Laslty, the meam humidity of all sensor was plotted.
 
 By Analizing the graphs plotted it can be said that:
-- The minimum humidity recorded during the 48 hours data collection period in the local server was around 20% to 60%.
+- The minimum humidity recorded during the 48 hours data collection period in the local server was around 20%.
 - The maximum humidty recorded during the 48 hours data collection period in the local server was around 140%.
 - The mean humidity recorded during the 48 hours data collection period in the local server ranged from 20% to 60%.
 - Sensor 1 and Sensor 4 recorded the highest humidity levels during the 48 hours data collection period in the local server.
@@ -182,6 +182,19 @@ By Analizing the graphs plotted it can be said that:
 
 ![B6B1D161-BB55-4790-8EE4-BFE5CE2C9951](https://user-images.githubusercontent.com/111761417/207772323-cc870b6e-dfca-4188-9b9e-3e20d534b0b1.jpeg)
 **Fig 9.** The following image presents a set of four graphs related to the humidity and temperature in the remote server server. The two graphs on top represent the humidity data collected by the sensor in the remote server during the 48 hour data collection period and, next to it, the grpah for the same data smoothed. Similarly, the two graphs on the bottom represent the temperature data collected by the sensor in the remote server during 48 hour the data collection period and, next to it, the grpah of the same data smoothed.
+
+By Analizing the graphs plotted it can be said that:
+- The minimum humidity recorded during the 48 hours data collection period in the remote server was around 25%.
+- The maximum humidty recorded during the 48 hours data collection period in the remote server was around 40%.
+- The minimum temperature recorded during the 48 hours data collection period in the local server was around 12.5°C.
+- The maximum temperature recorded during the 48 hours data collection period in the local server was around 25.5°C.
+
+### MAXIMUM AND MINIMUM FOR HUMIDITY & TEMPERATURE DATA PLOTTING
+
+
+![2238BF34-2DD1-41CC-A64B-6225B9A91D74](https://user-images.githubusercontent.com/111761417/207792339-0dabb3ed-7ef2-4128-ba60-c9ab75f8ddb8.jpeg) ![D0B9946D-F79F-41C8-A47C-DFE93652071C](https://user-images.githubusercontent.com/111761417/207792370-0053b265-1664-4762-9f75-6c34e7b76d9d.jpeg)
+
+**Fig 10.** The following image presents a histogram for the humidity and temperature in the remote server server. The two graphs on top represent the humidity data collected by the sensor in the remote server during the 48 hour data collection period and, next to it, the grpah for the same data smoothed. Similarly, the two graphs on the bottom represent the temperature data collected by the sensor in the remote server during 48 hour the data collection period and, next to it, the grpah of the same data smoothed.
 
 ### 
 
