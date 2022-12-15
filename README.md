@@ -206,7 +206,17 @@ By Analizing the graphs plotted it can be more accuratly determined the maximum 
 
 ### MEDIAN FOR TEMPERATURE AND HUMIDITY
 
-<img width="740" alt="Untitled" src="https://user-images.githubusercontent.com/111761417/207808810-75be59cf-6be7-4182-96a2-7ce3657ec265.png">
+![Screen Shot 2022-12-15 at 17 25 00](https://user-images.githubusercontent.com/111761417/207809988-a4001209-0dc5-4282-8337-79a5555a7b4e.png)
+
+**Fig 13.** The following image present a graph for the mean of the temperature in the remote server server during the 48 hour data collection period.
+
+By Analizing the graphs plotted it can be more accuratly determined the maximum and minimum values for temperature and humidity in the remote server:
+
+![Screen Shot 2022-12-15 at 17 26 36](https://user-images.githubusercontent.com/111761417/207810020-8a1e1f07-76fc-4032-bff4-40910dc8d972.png)
+
+**Fig 14.** The following image present a graph for the mean of the humidity in the remote server server during the 48 hour data collection period.
+
+By Analizing the graphs plotted it can be more accuratly determined the maximum and minimum values for temperature and humidity in the remote server:
 
 
 # Criteria D: Functionality
