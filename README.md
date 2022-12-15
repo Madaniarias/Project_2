@@ -150,7 +150,7 @@ We will design and make a embeded system capable of measure the levels of humidi
 
 <img width="520" alt="57E85873-18D3-44CD-8C9B-B96F3752D788" src="https://user-images.githubusercontent.com/111761417/207747011-fc4a9bf0-41b7-415f-b588-dedb583f0c74.png">
 
-**Fig 8.** The following images presents a series of six graphs related to the temperature in the local server. Firstly, the raw data for each sensor was plotted. Aditionally, a graph with all the raw data frm each sensor was added to identify the level of disparity amongst the raw data for the tempeture there is for the raw data in the local server. Laslty, the meam temperature of all sensor was plotted.
+**Fig 8.** The following images presents a series of six graphs related to the temperature in the local server. Firstly, the raw data for each sensor was plotted. Aditionally, a graph with all the raw data from each sensor was added to identify the level of disparity amongst the raw data for the tempeture there is for the raw data in the local server. Laslty, the meam temperature of all sensor was plotted.
 
 By Analizing the graphs plotted it can be said that:
 - The minimum temperature recorded during the 48 hours data collection period in the local server was around 17°C.
@@ -159,6 +159,20 @@ By Analizing the graphs plotted it can be said that:
 - Sensor 1 and Sensor 3 recorded the highest temperatures (both reaching around 22.5°C) during the 48 hours data collection period in the local server.
 - Sensor 2 and Sensor 4 recorded the lowest temperatures (both reaching around 17°C) during the 48 hours data collection period in the local server.
 - Sensor 4 recorded the lowest temperatures out of all sensors during the 48 hours data collection period in the local server.
+
+### RAW DATA PLOTTING + AVERAGE (HUMIDITY)
+
+![08F8F5B0-F056-45B2-8AE9-5D3F3C055724](https://user-images.githubusercontent.com/111761417/207749781-5ffec6bf-86fc-43e2-b022-de7193582920.jpeg)
+
+**Fig 9.** The following images presents a series of six graphs related to the humidity in the local server. Firstly, the raw data for each sensor was plotted. Aditionally, a graph with all the raw data from each sensor was added to identify the level of disparity amongst the raw data for the humidity there is for the raw data in the local server. Laslty, the meam humidity of all sensor was plotted.
+
+By Analizing the graphs plotted it can be said that:
+- The minimum humidity recorded during the 48 hours data collection period in the local server was around 20% to 60%.
+- The maximum humidty recorded during the 48 hours data collection period in the local server was around 140%.
+- The mean humidity recorded during the 48 hours data collection period in the local server ranged from 20% to 60%.
+- Sensor 1 and Sensor 4 recorded the highest humidity levels during the 48 hours data collection period in the local server.
+- Sensor 3 and Sensor 4 recorded the lowest humidity levels (both reaching around 17°C) during the 48 hours data collection period in the local server.
+- Sensor 4 recorded the highest humidity levels out of all sensors during the 48 hours data collection period in the local server reaching 140%, which presents a big level of disparity compared to the rest of the data for humidity, indicating that something might have happened with that sensors duting the 48 data collection period in the local server.
 
 ## Prototypes
 
