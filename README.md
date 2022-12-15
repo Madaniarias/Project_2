@@ -148,11 +148,10 @@ We will design and make a embeded system capable of measure the levels of humidi
 
 ### RAW DATA PLOTTING + AVERAGE (TEMPERATURE)
 
-**Fig 6.**　The figure shows the explanation of each step for the flow diagram used to getting the code from server data during the 48 hours requiered for the project.
+
+**Fig 8.**　The figure shows the explanation of each step for the flow diagram used to getting the code from server data during the 48 hours requiered for the project.
 
 ## Prototypes
-## Protoypes 
-
 
 ### 
 
