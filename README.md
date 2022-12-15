@@ -147,8 +147,7 @@ We will design and make a embeded system capable of measure the levels of humidi
 ## Computational Thinking
 
 ### RAW DATA PLOTTING + AVERAGE (TEMPERATURE)
-
-
+<img width="520" alt="57E85873-18D3-44CD-8C9B-B96F3752D788" src="https://user-images.githubusercontent.com/111761417/207747011-fc4a9bf0-41b7-415f-b588-dedb583f0c74.png">
 **Fig 8.**　The figure shows the explanation of each step for the flow diagram used to getting the code from server data during the 48 hours requiered for the project.
 
 ## Prototypes
