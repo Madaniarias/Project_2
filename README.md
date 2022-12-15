@@ -220,6 +220,21 @@ By Analizing the graphs plotted it can be said that:
 By Analizing the graphs plotted it can be said that:
 - The value for the median is 33%.
 
+## Compariosn between Local and Remote servers
+
+### OUTDOOR VS. INDOOR AVERAGE TEMPERATURE AND HUMIDITY
+
+![D55DEE78-2ECD-4DF5-918F-788145BDACE4](https://user-images.githubusercontent.com/111761417/207812774-9ecb9748-bbcd-4660-a9ff-59408e3e83ee.jpeg)
+
+**Fig 15.** The following image presents a set of two graphs comparing the means of the humidity and temperature in the local server vs the remote sever during the 48 hour data collection period.
+
+By Analizing the graphs plotted it can be said that:
+- The temperature inside 
+
+
+### CURVE FIT
+
+
 # Criteria D: Functionality
 The Science Poster, Comparative Analysis, and Video/Demo is stored in this Google Drive:
 https://drive.google.com/drive/folders/1Kz8aMAfJCHmsgjQVhcB54h2y-usvIOQJ?usp=sharing
