@@ -142,10 +142,19 @@ We will design and make a embeded system capable of measure the levels of humidi
 - Smoothing the data form teh graphs to get a easier to understand graph.
 - Using dictionaries and keys to store specific data and retrieve it when necessary
 
-## Sources
-
+## Sources 
 
 ## Computational Thinking
+
+### RAW DATA PLOTTING + AVERAGE (TEMPERATURE)
+
+**Fig 6.**　The figure shows the explanation of each step for the flow diagram used to getting the code from server data during the 48 hours requiered for the project.
+
+## Prototypes
+## Protoypes 
+
+
+### 
 
 # Criteria D: Functionality
 The Science Poster, Comparative Analysis, and Video/Demo is stored in this Google Drive:
