@@ -64,34 +64,44 @@ We will design and make a embeded system capable of measure the levels of humidi
 | 8      | Assemble Embedded System Wiring | Complete set up of four DHT11 sensors on breadboard & raspberry pi with long wires able to reach all around the room | 5 min | Dec 6 | B |
 | 9      | Setup remote development with Visual Studio Code | Remote Development enables a programmer to connect to a remote server, in this case the Raspberry Pi, access this server's storage, and work on coding seamlessly as if these files were saved in the programmer's desktop locally [^8]. | 30 minutes | Dec 7 | B 
 | 10     | Beta Coding | Write lines of code in Python that enables the Raspberry pi to read data from the four DHT11 sensors set up, upload these data to the [UWC ISAK Japan Weather Station Server]('192.168.6.142'), and save these data in a CSV file in the Raspoberry Pi' storage. | 5 hours | Dec 7 - 9 | C 
-| 11      | Beta Testing | Allow the Raspberry Pi to collect data, save these data locally in an assigned CSV file, and upload these data to the server. | 40 minutes | Dec 9 | D 
+| 11      | Alpha-Testig | Allow the Raspberry Pi to collect data, save these data locally in an assigned CSV file, and upload these data to the server. | 40 minutes | Dec 9 | D 
 | 12     | Data Collection | Allow the embedded system - Raspberry Pi and its four DHT11 sensors - to collect temperature and humidity data in R4 Down Room A. | 48 hours | Dec 9 10pm to Dec 11 10pm | D 
+| 13    | Making mean graphs | Create a piece of code that is able to plot the mean for the temperature and humidity graphs for inside and outside the room separately| 30 min. | Dec 11 | C
+| 14    | Making median graphs | Create a piece of code that is able to plot the median for the temperature and humidity graphs for inside and outside the room separately| 30 min. | Dec 11 | C
+| 15    | Making Standard deviation graphs | Create a piece of code that is able to plot the standard deviation for the temperature and humidity graphs for inside and outside the room separately | 30 min. | Dec 11 | C
+| 16    | Making maximum and minimum graphs | Create a piece of code that is able to plot the maximum and minimum for the temperature and humidity graphs for inside and outside the room separately| 30 min. | Dec 12 | C
+| 17    | Making comparison graphs for the means of temperature inside and outside | Create a piece of code that is able to plot the comparison graphs for the temperature inside and outside the room | 30 min. | Dec 12 | C
+| 18    | Making comparison graphs for the means of humidity inside and outside | Create a piece of code that is able to plot the comparison graphs for the humidity inside and outside the room | 30 min. | Dec 12 | C
+| 19.   | Creating non-linear model for comparison graphs | After analysing the comparison graphs of the mean of the temperature from inside and outside and the the comparison graph of the mean of the humidity from inside and otside, use a non-linear model to create a realtion between the data from inside and outside | 45 min | Dec 12 | C
+| 20.  | Alpha-Testig | Run the code for the graphs and identify possible errors to improve the code | 25 min | Dec 12 | C
+| 21.  | Creating science poster | Summarizing in a science poster the results obtained from the data plotting: identify methods, reach conclusions and establish recommendations for improvement | 1 hour. | Dec 12 | D
+| 22   | Filming explanation videos | Creating a video about the functionality of the code, the explanation and analysis of the results and presentation of the scientific poster and graphs | 1 hour | Dec 12 | D
 
 ## Flow Diagrams
 
 ### ACCESSING DATA
 
 ![Diagrams Cs Project 2-2](https://user-images.githubusercontent.com/111761417/207186556-22b2b4cb-5665-4f2c-9154-732065d628f3.jpg)
-
 **Fig 3.**　The figure shows  the flow diagram used to access the data from the server
 
 ### EXPLANATION OF ACCESING DATA
 
 ![Diagrams Cs Project 2-3 (1)](https://user-images.githubusercontent.com/111761417/207186937-1e3ec6c0-0bc1-4fe0-9af4-95bc42a34133.jpg)
-
 **Fig 4.**　The figure shows the explanation of each step for the flow diagram used to access the data from the server
 
 ### GETTING CODE FROM SERVER DATA DURING THE SPECIFIC TIME PERIOD NEEDED
 
 ![Diagrams Cs Project 2-4](https://user-images.githubusercontent.com/111761417/207187111-0c35d412-e6cf-439f-a2d6-c72a3633af71.jpg)
-
 **Fig 5.**　The figure shows for the flow diagram used to getting the code from server data during the 48 hours requiered for the project.
 
 ### EXPLANATION GETTING CODE FROM SERVER DATA DURING THE SPECIFIC TIME PERIOD NEEDED
 
 ![Diagrams Cs Project 2-5](https://user-images.githubusercontent.com/111761417/207187169-9db339d9-b11f-41c5-b238-a157a9909693.jpg)
-
 **Fig 6.**　The figure shows the explanation of each step for the flow diagram used to getting the code from server data during the 48 hours requiered for the project.
+
+### SMOOTHING
+![Diagrams Cs Project 2-6](https://user-images.githubusercontent.com/111761417/207658515-14a6dcea-9180-4ddb-b8c8-344169027118.jpg)
+**Fig 7.**　The figure shows for the flow diagram used to smooth the data obtained from server data during the 48 hours requiered for the project when plotting graphs. It is also showned the explanation of each step for the flow diagram used to smooth the data obtained from server.
 
 ## Test Plan
 | Test No | Type of Test                                                |  Date                                                                                               | Procedure | Expected Outcome |  |
@@ -107,12 +117,133 @@ We will design and make a embeded system capable of measure the levels of humidi
 
 ## Existing Tools
 
-## Sources
+- For loops
+- Functions
+- While loops
+- If statements
+- Unicodes (color)
+- Libraries: Matplotlib, Numpy, Datetime, Requests, Adafruit_DHT
+- Graphical desktop-sharing system: VCN Viewer
+- API server
+- CVS files
+- Pycharm
+
+## Techniques applied
+
+- Matplotlib library for plotting graphs
+- Numpy library for mathematical processes and equations
+- Using Graphical desktop-sharing system VCN Viewer to work with Raspberry Pi 4
+- Logging in to and reading data from an online api server and posting data to it.
+- Datetime library to access times
+- Requests library to request data from server
+- Reading/Appending/writting csv files
+- Adafruit_DHT to wrok with Adafruit DHT series sensors
+- Plotting graph for median, mean, maximum, minimum, standard deviation and a non linear model using python.
+- Smoothing the data form teh graphs to get a easier to understand graph.
+- Using dictionaries and keys to store specific data and retrieve it when necessary
+
+## Sources 
 
 ## Computational Thinking
 
+## Local server (Located in R4-Down Room)
+
+### RAW DATA PLOTTING + AVERAGE (TEMPERATURE)
+
+<img width="520" alt="57E85873-18D3-44CD-8C9B-B96F3752D788" src="https://user-images.githubusercontent.com/111761417/207747011-fc4a9bf0-41b7-415f-b588-dedb583f0c74.png">
+
+**Fig 8.** The following images presents a series of six graphs related to the temperature in the local server. Firstly, the raw data for each sensor was plotted. Aditionally, a graph with all the raw data from each sensor was added to identify the level of disparity amongst the raw data for the tempeture there is for the raw data in the local server. Laslty, the meam temperature of all sensor was plotted.
+
+By Analizing the graphs plotted it can be said that:
+- The minimum temperature recorded during the 48 hours data collection period in the local server was around 17.5°C.
+- The maximum temperature recorded during the 48 hours data collection period in the local server was around 22°C.
+- Sensor 1 and Sensor 3 recorded the highest temperatures (both reaching around 22.5°C) during the 48 hours data collection period in the local server.
+- Sensor 2 and Sensor 4 recorded the lowest temperatures (both reaching around 17°C) during the 48 hours data collection period in the local server.
+- Sensor 4 recorded the lowest temperatures out of all sensors during the 48 hours data collection period in the local server.
+
+### RAW DATA PLOTTING + AVERAGE (HUMIDITY)
+
+![08F8F5B0-F056-45B2-8AE9-5D3F3C055724](https://user-images.githubusercontent.com/111761417/207749781-5ffec6bf-86fc-43e2-b022-de7193582920.jpeg)
+
+**Fig 9.** The following images presents a series of six graphs related to the humidity in the local server. Firstly, the raw data for each sensor was plotted. Aditionally, a graph with all the raw data from each sensor was added to identify the level of disparity amongst the raw data for the humidity there is for the raw data in the local server. Laslty, the meam humidity of all sensor was plotted.
+
+By Analizing the graphs plotted it can be said that:
+- The minimum humidity recorded during the 48 hours data collection period in the local server was around 20%.
+- The maximum humidty recorded during the 48 hours data collection period in the local server was 60.5% (removing the outlier pointed out by python that reaches 140% in Sensor 4).
+- Sensor 1 and Sensor 4 recorded the highest humidity levels during the 48 hours data collection period in the local server.
+- Sensor 3 and Sensor 4 recorded the lowest humidity levels (both reaching around 17°C) during the 48 hours data collection period in the local server.
+- Sensor 4 recorded the highest humidity levels out of all sensors during the 48 hours data collection period in the local server reaching 140%, which presents a big level of disparity compared to the rest of the data for humidity, indicating that something might have happened with that sensors duting the 48 data collection period in the local server.
+
+### MAXIMUM AND MINIMUM + STANDARD DEVIATION (ERROR BARS) 
+
+![9953676F-0D99-4284-8297-1E2570517C04](https://user-images.githubusercontent.com/111761417/207796687-b4ac7e3b-de05-489c-956f-e69b67f20d38.jpeg)
+
+**Fig 10.** The following images presents a graph for the smoothed indoor average temperature in the local server. The error bars are based on standard deviation and the minimum and Maximum of all four indoor sensors are shown through the fill.inbetween plot. The smoothing window is 12 beacause the server collects data every 5 minutes.
+
+By Analizing the graphs plotted it can be said that:
+- Becuase most of the error bars are overlaping, we can say that the data obtained from all sesors does not differ that much from one another so, consequently, and avergae could be used.
+
+
+## Remote server
+
+### HUMIDITY & TEMPERATURE RAW DATA PLOTTING
+
+![B6B1D161-BB55-4790-8EE4-BFE5CE2C9951](https://user-images.githubusercontent.com/111761417/207772323-cc870b6e-dfca-4188-9b9e-3e20d534b0b1.jpeg)
+**Fig 11.** The following image presents a set of four graphs related to the humidity and temperature in the remote server server. The two graphs on top represent the humidity data collected by the sensor in the remote server during the 48 hour data collection period and, next to it, the grpah for the same data smoothed. Similarly, the two graphs on the bottom represent the temperature data collected by the sensor in the remote server during 48 hour the data collection period and, next to it, the grpah of the same data smoothed.
+
+### MAXIMUM AND MINIMUM FOR HUMIDITY & TEMPERATURE DATA PLOTTING
+
+![3C4720B2-9E54-4215-9CB4-CB2D027E9080](https://user-images.githubusercontent.com/111761417/207792958-f5ce507d-643f-4ec3-acac-7c183ac57056.jpeg)
+![D0B9946D-F79F-41C8-A47C-DFE93652071C](https://user-images.githubusercontent.com/111761417/207792370-0053b265-1664-4762-9f75-6c34e7b76d9d.jpeg)
+
+**Fig 12.** The following image presents a set of two graphs for the humidity and temperature maximum and minimum values in the remote server server. The graph on top represents the humidity maximum and minimum values of the data collected by the sensor in the remote server during the 48 hour data collection period outdoors. Similarly, the graph on top represents the temperature maximum and minimum values of the data collected by the sensor in the remote server during the 48 hour data collection period outdoors.
+
+By Analizing the graphs plotted it can be more accuratly determined the maximum and minimum values for temperature and humidity in the remote server:
+- The minimum humidity recorded during the 48 hours data collection period in the remote server was 25%.
+- The maximum humidty recorded during the 48 hours data collection period in the remote server was 44%.
+- The minimum temperature recorded during the 48 hours data collection period in the local server was 13°C.
+- The maximum temperature recorded during the 48 hours data collection period in the local server was 26°C.
+
+### MEDIAN FOR TEMPERATURE AND HUMIDITY
+
+![Screen Shot 2022-12-15 at 17 25 00](https://user-images.githubusercontent.com/111761417/207809988-a4001209-0dc5-4282-8337-79a5555a7b4e.png)
+
+**Fig 13.** The following image present a graph for the mean of the temperature in the remote server server during the 48 hour data collection period.
+
+By Analizing the graphs plotted it can be said that:
+- The value for the median is 21°C.
+
+![Screen Shot 2022-12-15 at 17 26 36](https://user-images.githubusercontent.com/111761417/207810020-8a1e1f07-76fc-4032-bff4-40910dc8d972.png)
+
+**Fig 14.** The following image present a graph for the mean of the humidity in the remote server server during the 48 hour data collection period.
+
+By Analizing the graphs plotted it can be said that:
+- The value for the median is 33%.
+
+## Compariosn between Local and Remote servers
+
+### OUTDOOR VS. INDOOR AVERAGE TEMPERATURE AND HUMIDITY
+
+![D55DEE78-2ECD-4DF5-918F-788145BDACE4](https://user-images.githubusercontent.com/111761417/207812774-9ecb9748-bbcd-4660-a9ff-59408e3e83ee.jpeg)
+
+**Fig 15.** The following image presents a set of two graphs comparing the means of the humidity and temperature in the local server vs the remote sever during the 48 hour data collection period.
+
+By Analizing the graphs plotted it can be said that:
+- The temperature inside tended to be lower than outside due to the heaters inside the houses.
+- The temperature inside tended to be more consistent than outside because the conditions inside the room where almost the same during the data collection period (windonds closed, same temperature in heater, etc) whereas outside it was more incosistent due to the cnahe in weather conditions (snow, rain, sun, etc)
+
+![Screen Shot 2022-12-15 at 17 26 36](https://user-images.githubusercontent.com/111761417/207866966-a96a7ab8-af68-4a16-af05-bccacf4329fe.png)
+
+
+
+
+
+### CURVE FIT
+
+
 # Criteria D: Functionality
 The Science Poster, Comparative Analysis, and Video/Demo is stored in this Google Drive:
+https://drive.google.com/drive/folders/1Kz8aMAfJCHmsgjQVhcB54h2y-usvIOQJ?usp=sharing
 
 
 [^1]: Industries, Adafruit. “DHT11 Basic Temperature-Humidity Sensor + Extras.” Adafruit Industries Blog RSS, https://www.adafruit.com/product/386.
