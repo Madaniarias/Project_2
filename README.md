@@ -229,7 +229,13 @@ By Analizing the graphs plotted it can be said that:
 **Fig 15.** The following image presents a set of two graphs comparing the means of the humidity and temperature in the local server vs the remote sever during the 48 hour data collection period.
 
 By Analizing the graphs plotted it can be said that:
-- The temperature inside 
+- The temperature inside tended to be lower than outside due to the heaters inside the houses.
+- The temperature inside tended to be more consistent than outside because the conditions inside the room where almost the same during the data collection period (windonds closed, same temperature in heater, etc) whereas outside it was more incosistent due to the cnahe in weather conditions (snow, rain, sun, etc)
+
+![Screen Shot 2022-12-15 at 17 26 36](https://user-images.githubusercontent.com/111761417/207866966-a96a7ab8-af68-4a16-af05-bccacf4329fe.png)
+
+
+
 
 
 ### CURVE FIT
