@@ -246,6 +246,13 @@ By Analizing the graphs plotted it can be said that:
 **Fig 17.** The following image presents a set of graphs for the indoor temperature and humidity during the 48 hour data collection period. A quatric polynomial model was used when plotting the graphs. Additionally, the predictions for the next 12 hours are recorded in the graphs.
 
 # Criteria D: Functionality
+
+## Scientific Poster
+
+![WEATHER STATION](https://user-images.githubusercontent.com/111761417/207924878-5a0bc134-8e29-4610-9041-01204e621488.png)
+
+**Fig 18.** The following image presents the scientific poster for the project. It is divided in 5 section being Background, Methods, Results, Conclusions and Recommendations respectevely.
+
 The Science Poster, Comparative Analysis, and Video/Demo is stored in this Google Drive:
 https://drive.google.com/drive/folders/1Kz8aMAfJCHmsgjQVhcB54h2y-usvIOQJ?usp=sharing
 
