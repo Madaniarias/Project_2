@@ -191,10 +191,10 @@ By Analizing the graphs plotted it can be said that:
 
 ### MAXIMUM AND MINIMUM FOR HUMIDITY & TEMPERATURE DATA PLOTTING
 
+![3C4720B2-9E54-4215-9CB4-CB2D027E9080](https://user-images.githubusercontent.com/111761417/207792958-f5ce507d-643f-4ec3-acac-7c183ac57056.jpeg)
+![D0B9946D-F79F-41C8-A47C-DFE93652071C](https://user-images.githubusercontent.com/111761417/207792370-0053b265-1664-4762-9f75-6c34e7b76d9d.jpeg)
 
-![2238BF34-2DD1-41CC-A64B-6225B9A91D74](https://user-images.githubusercontent.com/111761417/207792339-0dabb3ed-7ef2-4128-ba60-c9ab75f8ddb8.jpeg) ![D0B9946D-F79F-41C8-A47C-DFE93652071C](https://user-images.githubusercontent.com/111761417/207792370-0053b265-1664-4762-9f75-6c34e7b76d9d.jpeg)
-
-**Fig 10.** The following image presents a histogram for the humidity and temperature in the remote server server. The two graphs on top represent the humidity data collected by the sensor in the remote server during the 48 hour data collection period and, next to it, the grpah for the same data smoothed. Similarly, the two graphs on the bottom represent the temperature data collected by the sensor in the remote server during 48 hour the data collection period and, next to it, the grpah of the same data smoothed.
+**Fig 10.** The following image presents a set of two graphs for the humidity and temperature maximum and minimum values in the remote server server. The graphs on top represent the humidity data collected by the sensor in the remote server during the 48 hour data collection period and, next to it, the grpah for the same data smoothed. Similarly, the two graphs on the bottom represent the temperature data collected by the sensor in the remote server during 48 hour the data collection period and, next to it, the grpah of the same data smoothed.
 
 ### 
 
