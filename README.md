@@ -155,6 +155,46 @@ We will design and make a embeded system capable of measure the levels of humidi
 ## Sources 
 
 ## Computational Thinking
+**API Requests**
+```.py
+#NEW USER
+new_user = {'username': 'Zelan', 'password':'81105'}
+req = requests.post(url+"/register", json=new_user)
+print(req.json())
+
+#LOG IN USER
+user = {'username': 'Zelan', 'password':'81105'}
+req = requests.post('http://192.168.6.142/login', json=user)
+access_token = req.json()["access_token"]
+print(access_token)
+auth = {"Authorization": f"Bearer {access_token}"}
+
+#CHECK NEW SENSORS INFORMATION
+r = requests.get('http://192.168.6.142/sensors', headers=auth)
+data = r.json()
+readings = data['readings'][0]
+for i in readings:
+	if i['location']=='R4D-A':
+		print(i)
+```
+
+**Data Smoothing**
+```.py
+def smoothing(data,window):
+    data_ma_mph = []
+    data_ma_sth = []
+    for t in range(0,len(data),window):
+        t_hour = data[t:t+window]
+        data_ma_mph.append(sum(t_hour) / len(t_hour))
+        data_ma_sth.append(np.std(t_hour))
+    return data_ma_mph, data_ma_sth
+```
+
+**Quartic Polynomial Fitting**
+```.py
+
+```
+
 
 ## Local server (Located in R4-Down Room)
 
