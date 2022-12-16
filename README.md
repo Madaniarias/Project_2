@@ -192,7 +192,15 @@ def smoothing(data,window):
 
 **Quartic Polynomial Fitting**
 ```.py
-
+def quartic(data):
+    x=np.arange(len(data))
+    new_y=[]
+    a,b,c,d,e = np.polyfit(x,data, 4)
+    print(a,b,c,d,e)
+    for i in x:
+        eq = (a*(i**4))+(b*(i**3))+(c*(i**2))+(d*i)+e
+        new_y.append(eq)
+    return new_y
 ```
 
 
