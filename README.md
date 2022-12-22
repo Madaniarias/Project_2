@@ -146,6 +146,11 @@ We will design and make a embeded system capable of measure the levels of humidi
 
 ## Computational Thinking
 ### Accessing the Server
+We used the _Adafruit_DHT_ library for the Raspberry Pi to do functions specifically for the DHT11 sensors. The _os_ library is used to access files within the Raspberry Pi meanwhile the _requests_ module allows to send HTTP requests.
+
+The UWC ISAK Weather Station Server has certain rules/endpoints in the server. In the following code, we registered a new user and set a password, logged in to the server using this new username & password, and uploaded eight new sensors (4 Temperature & 4 Humidity sensors). We created these new sensors using a for loop for efficiency instead of manually inputting all 4 of each type of sensors. Lastly, we wanted to check if the sensor upload was successfully by printing all the registered sensors in the server located in R4 Down Room A.
+
+_Note: We redacted the actual username & password with number signs ('#') for privacy._
 ```.pycon
 import Adafruit_DHT
 import os
@@ -153,7 +158,7 @@ import requests
 from datetime import datetime
 
 # NEW USER
-new_user = {'username': 'Zelan', 'password':'81105'}
+new_user = {'username': '#####', 'password':'#####'}
 req = requests.post(url+"/register", json=new_user)
 print(req.json())
 
@@ -295,11 +300,6 @@ By Analizing the graphs plotted it can be said that:
 
 ![Screen Shot 2022-12-15 at 17 26 36](https://user-images.githubusercontent.com/111761417/207866966-a96a7ab8-af68-4a16-af05-bccacf4329fe.png)
 
-
-
-
-
-### CURVE FIT
 
 
 # Criteria D: Functionality
