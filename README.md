@@ -147,7 +147,39 @@ We will design and make a embeded system capable of measure the levels of humidi
 ## Computational Thinking
 ### Accessing the Server
 ```.pycon
+import Adafruit_DHT
+import os
+import requests
+from datetime import datetime
 
+# NEW USER
+new_user = {'username': 'Zelan', 'password':'81105'}
+req = requests.post(url+"/register", json=new_user)
+print(req.json())
+
+# LOG IN USER
+user = {'username': 'Zelan', 'password':'81105'}
+req = requests.post('http://192.168.6.142/login', json=user)
+access_token = req.json()["access_token"]
+print(access_token)
+auth = {"Authorization": f"Bearer {access_token}"}
+
+# CREATE NEW SENSORS
+for i in range(1,5):
+   new_temp = {"name":f"zm_temp{i}","unit":"C","location":"R4D-A","type":"Temperature"}
+   new_hum = {"name":f"zm_hum{i}","unit":"%","location":"R4D-A","type":"Humidity"}
+   temp_req = requests.post('http://192.168.6.142/sensor/new', json=new_temp, headers=auth)
+   hum_req = requests.post('http://192.168.6.142/sensor/new', json=new_hum, headers=auth)
+   print(temp_req.json())
+   print(hum_req.json())       
+
+# CHECK NEW SENSORS
+r = requests.get('http://192.168.6.142/sensors', headers=auth)
+data = r.json()
+readings = data['readings'][0]
+for i in readings:
+   if i['location']=='R4D-A':
+   print(i)
 ```
 
 ### Reading Sensor Data
@@ -160,7 +192,20 @@ We will design and make a embeded system capable of measure the levels of humidi
 
 ```
 
+### 4 Local Sensor Plots - Individual & Mean Plots
+```.pycon
 
+```
+
+### Standard Deviation Errorbar Plot
+```.pycon
+
+```
+
+### Comparative Plot (Gridspec)
+```.pycon
+
+```
 
 ## Local server (Located in R4-Down Room)
 
