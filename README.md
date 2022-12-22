@@ -204,15 +204,62 @@ while True{
       hum.append(hum1)
       temp.append(temp1)
 ...
+   time.sleep(300)
 }
 ```
 
 ### Uploading Data to CSV & Server
 ```.pycon
+import os
+import requests
+from datetime import datetime
+while True{
+   f = open("/home/piroku/"proj_data.csv,"a")
+   ...
+   for i in pins:
+   ...
 
+      #UPLOAD IN SERVER
+      new_temp_record = {"datetime":datetime.now().isoformat(), "sensor_id":sensor_id_temp[i],"value":temp1}
+      r=requests.post('http://192.168/6.142/reading/new',json=new_temp_record, headers=auth)
+      print(r.json())
+   
+      new_hum_record = {"datetime":datetime.now().isoformat(), "sensor_id":sensor_id_hum[i],"value":hum1}
+      r=requests.post('http://192.168/6.142/reading/new',json=new_hum_record, headers=auth)
+      print(r.json())
+   f.write('{0},{1}C,{2}C,{3}C,{4}C,{5}%,{6}%,{7}%,{8}%\r\n,'.format(datetime.now().isoformat(),temp[0],temp[1],temp[2],temp[3],hum[0],hum[1],hum[2],hum[3]))
+}
 ```
 
 ## Computational Thinking - Data Visualization
+
+### Get data from Server
+Similar to the mechanism employed for the Raspberry Pi code, we created two dictionaries. The **_pins_** dictionary contains the different  sensors as keys and the respective sensor_id as values. While the **_data_** dictionary is an initially empty dictionary that will serve as storage for the data to be accessed from the server.
+
+We created a for loop that goes through the readings in the server and uploads the data's value to its respective key in the **_data_** dictionary if its sensor id is equivalent to its right corresponding sensor id as stored in the **_pins_** dictionary.
+```.pycon
+#Import Libraries & Modules
+import requests
+from matplotlib import pyplot as plt
+import warnings
+warnings.simplefilter('ignore')
+import numpy as np
+
+req = requests.get('http://192.168.6.142/readings')
+data1 = req.json()
+readings = data1['readings'][0]
+
+pins = {'Sensor 1':[452,467],'Sensor 2':[464,468],'Sensor 3':[465,469],'Sensor 4':[466,471]}
+data = {'Sensor 1':{'temp':[],'humidity':[]},'Sensor 2':{'temp':[],'humidity':[]}, 'Sensor 3':{'temp':[],'humidity':[]},'Sensor 4':{'temp':[],'humidity':[]}}
+
+for sample in readings:
+    for k in data.keys():
+        if sample['sensor_id'] == pins[f'{k}'][0]:
+            data[f'{k}']['temp'].append(sample['value'])
+        elif sample['sensor_id'] == pins[f'{k}'][1]:
+            data[f'{k}']['humidity'].append(sample['value'])
+```
+
 ### 4 Local Sensor Plots - Individual & Mean Plots
 ```.pycon
 
