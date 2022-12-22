@@ -144,7 +144,7 @@ We will design and make a embeded system capable of measure the levels of humidi
 
 ## Sources 
 
-## Computational Thinking
+## Computational Thinking - Embedded System
 ### Accessing the Server
 We used the _Adafruit_DHT_ library for the Raspberry Pi to do functions specifically for the DHT11 sensors. The _os_ library is used to access files within the Raspberry Pi meanwhile the _requests_ module allows to send HTTP requests.
 
@@ -188,8 +188,23 @@ for i in readings:
 ```
 
 ### Reading Sensor Data
-```.pycon
+Instead of manually reading through each pin and assigning data to 8 different variables, the developers decided to utilize lists and dictionaries. Particularly, a list of integers of hardware pins was created. A dictionary was also created for each of the temperature and humidity sensor, with the pin (integer type) as the key and the sensor's corresponding sensor id as the value. These dictionaries and list are utilized in a for loop that goes through every element in the _**pins**_ list.
 
+Given that the sensor may sometimes record 'None', we included a while loop inside the previously mentioned for loop that enables the Embedded System to read data in the particular sensor until it doesn't read 'None'. When successful, this is then appended to a temporary hum and temp list.  
+```.pycon 
+while True{
+...
+   pins,hum,temp = [2,3,4,14],[],[]
+   sensor_id_temp = {2:452, 3:465, 4:464, 14:466}
+   sensor_id_hum = {2:467,3:468,4:469,14:471}
+   for i in pins:
+      dht1 = Adafruit_DHT.read(dht1,i)
+      while hum1 is None or temp1 is None:
+         hum1, temp1 = Adafruit_DHT.read(dht1,i)
+      hum.append(hum1)
+      temp.append(temp1)
+...
+}
 ```
 
 ### Uploading Data to CSV & Server
@@ -197,6 +212,7 @@ for i in readings:
 
 ```
 
+## Computational Thinking - Data Visualization
 ### 4 Local Sensor Plots - Individual & Mean Plots
 ```.pycon
 
