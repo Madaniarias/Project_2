@@ -263,6 +263,10 @@ for sample in readings:
 ### 4 Local Sensor Plots - Individual & Mean Plots
 ```.pycon
 
+# GET THE MEAN
+mean_temp = [(a+b+c+d) / 4 for a,b,c,d in zip(data["Sensor 1"]["temp"],data["Sensor 2"]["temp"],data["Sensor 3"]["temp"],data["Sensor 4"]["temp"])]
+mean_hum = [(a+b+c+d) / 4 for a,b,c,d in zip(data["Sensor 1"]["humidity"],data["Sensor 2"]["humidity"],data["Sensor 3"]["humidity"],data["Sensor 4"]["humidity"])]
+
 ```
 
 ### Standard Deviation Errorbar Plot
