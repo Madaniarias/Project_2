@@ -10,20 +10,10 @@
    * [Success Criteria](#success-criteria)
 1. [Criteria B: Design](#criteria-b-design)
     * [Record of Tasks](#record-of-tasks)
-    * * [Test Plan](#test-plan)
 1. [Criteria C: Development](#criteria-c-development)
-   * [Existing Tools](#existing-tools)
-   * [Techniques Applied](#techniques-applied)
-   * [Sources](#sources)
-   * [Computational Thinking](#computational-thinking)
-   * [Local Server Plots](#local-server-located-in-r4-down-room)
-     * [Raw Data Plotting + Average Temperature](#raw-data-plotting--average-temperature)
-     * [Raw Data Plotting + Average Humidity](#raw-data-plotting--average-humidity)
-     * [Maximum and Minimum + STD Error Bars](#maximum-and-minimum--standard-deviation-error-bars)
-   * [Remote Server](#remote-server)
-     * [Humidity & Temperature Raw Data Plotting](#humidity--temperature-raw-data-plotting)
-     * [Maximum and Minimum for Humidity ]
-   * []
+   * [List of techniques used](#list-of-techniques-used)
+   * [Development](#development)
+   * [Test Plan](#test-plan)
 2. [Criteria D: Functionality](#criteria-d-functionality)
    * [Science Poster](#science-poster)
    * [Video](#video)
@@ -146,8 +136,8 @@ We will design and make a embeded system capable of measure the levels of humidi
 - Logging in to and reading data from an online api server and posting data to it.
 - Datetime library to access times
 - Requests library to request data from server
-- Reading/Appending/writing csv files
-- Adafruit_DHT to work with Adafruit DHT series sensors
+- Reading/Appending/writting csv files
+- Adafruit_DHT to wrok with Adafruit DHT series sensors
 - Plotting graph for median, mean, maximum, minimum, standard deviation and a non linear model using python.
 - Smoothing the data form teh graphs to get a easier to understand graph.
 - Using dictionaries and keys to store specific data and retrieve it when necessary
@@ -155,31 +145,6 @@ We will design and make a embeded system capable of measure the levels of humidi
 ## Sources 
 
 ## Computational Thinking
-**API Requests**
-
-```.py
-#NEW USER
-new_user = {'username': 'Zelan', 'password':'81105'}
-req = requests.post(url+"/register", json=new_user)
-print(req.json())
-
-#LOG IN USER
-user = {'username': 'Zelan', 'password':'81105'}
-req = requests.post('http://192.168.6.142/login', json=user)
-access_token = req.json()["access_token"]
-print(access_token)
-auth = {"Authorization": f"Bearer {access_token}"}
-
-#CHECK NEW SENSORS INFORMATION
-r = requests.get('http://192.168.6.142/sensors', headers=auth)
-data = r.json()
-readings = data['readings'][0]
-for i in readings:
-	if i['location']=='R4D-A':
-		print(i)
-```
-**Quartic Polynomial Fitting + Predictions**
-![](../../../../var/folders/y0/hqzvd0zj4gd8wqkm8l5zck3c0000gn/T/TemporaryItems/NSIRD_screencaptureui_yC4250/Screen Shot 2022-12-16 at 3.04.47 PM.png)
 
 ## Local server (Located in R4-Down Room)
 
@@ -268,6 +233,12 @@ By Analizing the graphs plotted it can be said that:
 - The temperature inside tended to be more consistent than outside because the conditions inside the room where almost the same during the data collection period (windonds closed, same temperature in heater, etc) whereas outside it was more incosistent due to the cnahe in weather conditions (snow, rain, sun, etc)
 
 ![Screen Shot 2022-12-15 at 17 26 36](https://user-images.githubusercontent.com/111761417/207866966-a96a7ab8-af68-4a16-af05-bccacf4329fe.png)
+
+
+
+
+
+### CURVE FIT
 
 
 # Criteria D: Functionality
