@@ -10,10 +10,20 @@
    * [Success Criteria](#success-criteria)
 1. [Criteria B: Design](#criteria-b-design)
     * [Record of Tasks](#record-of-tasks)
+    * * [Test Plan](#test-plan)
 1. [Criteria C: Development](#criteria-c-development)
-   * [List of techniques used](#list-of-techniques-used)
-   * [Development](#development)
-   * [Test Plan](#test-plan)
+   * [Existing Tools](#existing-tools)
+   * [Techniques Applied](#techniques-applied)
+   * [Sources](#sources)
+   * [Computational Thinking](#computational-thinking)
+   * [Local Server Plots](#local-server-located-in-r4-down-room)
+     * [Raw Data Plotting + Average Temperature](#raw-data-plotting--average-temperature)
+     * [Raw Data Plotting + Average Humidity](#raw-data-plotting--average-humidity)
+     * [Maximum and Minimum + STD Error Bars](#maximum-and-minimum--standard-deviation-error-bars)
+   * [Remote Server](#remote-server)
+     * [Humidity & Temperature Raw Data Plotting](#humidity--temperature-raw-data-plotting)
+     * [Maximum and Minimum for Humidity ]
+   * []
 2. [Criteria D: Functionality](#criteria-d-functionality)
    * [Science Poster](#science-poster)
    * [Video](#video)
@@ -145,6 +155,54 @@ We will design and make a embeded system capable of measure the levels of humidi
 ## Sources 
 
 ## Computational Thinking
+**API Requests**
+```.py
+#NEW USER
+new_user = {'username': 'Zelan', 'password':'81105'}
+req = requests.post(url+"/register", json=new_user)
+print(req.json())
+
+#LOG IN USER
+user = {'username': 'Zelan', 'password':'81105'}
+req = requests.post('http://192.168.6.142/login', json=user)
+access_token = req.json()["access_token"]
+print(access_token)
+auth = {"Authorization": f"Bearer {access_token}"}
+
+#CHECK NEW SENSORS INFORMATION
+r = requests.get('http://192.168.6.142/sensors', headers=auth)
+data = r.json()
+readings = data['readings'][0]
+for i in readings:
+	if i['location']=='R4D-A':
+		print(i)
+```
+
+**Data Smoothing**
+```.py
+def smoothing(data,window):
+    data_ma_mph = []
+    data_ma_sth = []
+    for t in range(0,len(data),window):
+        t_hour = data[t:t+window]
+        data_ma_mph.append(sum(t_hour) / len(t_hour))
+        data_ma_sth.append(np.std(t_hour))
+    return data_ma_mph, data_ma_sth
+```
+
+**Quartic Polynomial Fitting**
+```.py
+def quartic(data):
+    x=np.arange(len(data))
+    new_y=[]
+    a,b,c,d,e = np.polyfit(x,data, 4)
+    print(a,b,c,d,e)
+    for i in x:
+        eq = (a*(i**4))+(b*(i**3))+(c*(i**2))+(d*i)+e
+        new_y.append(eq)
+    return new_y
+```
+
 
 ## Local server (Located in R4-Down Room)
 
