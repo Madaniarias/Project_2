@@ -261,12 +261,77 @@ for sample in readings:
 ```
 
 ### 4 Local Sensor Plots - Individual & Mean Plots
+
+
+**Humidity**
 ```.pycon
 
 # GET THE MEAN
-mean_temp = [(a+b+c+d) / 4 for a,b,c,d in zip(data["Sensor 1"]["temp"],data["Sensor 2"]["temp"],data["Sensor 3"]["temp"],data["Sensor 4"]["temp"])]
 mean_hum = [(a+b+c+d) / 4 for a,b,c,d in zip(data["Sensor 1"]["humidity"],data["Sensor 2"]["humidity"],data["Sensor 3"]["humidity"],data["Sensor 4"]["humidity"])]
 
+#-----PLOTS-----
+fig, ax = plt.subplots(figsize=(18, 5))
+fig = plt.figure(figsize = ([12,6]))
+gs = gridspec.GridSpec(4,7)
+gs.update(wspace=1.5,hspace=0.7)
+
+ax1 = plt.subplot(gs[0:2,0:3])
+ax1.set_ylabel('Humidity (%)', labelpad = 0, fontsize = 8)
+ax1.plot(mean_hum)
+ax1.title.set_text('Mean Humidity of 4 sensors')
+ax1.set_xticks(range(0,577,144), ['Dec 10',' ','Dec 11',' ','Dec 12'])
+
+ax2 = plt.subplot(gs[2:4,0:3])
+ax2.set_ylabel('Humidity (%)', labelpad = 0, fontsize = 8)
+ax2.title.set_text('Humidity of 4 sensors')
+for k in data.keys():
+    ax2.plot(data[f"{k}"]["humidity"],label=f"{k}",alpha=0.5)
+ax2.set_xticks(range(0,577,144), ['Dec 10',' ','Dec 11',' ','Dec 12'])
+
+for i in range(3,6):
+   n=i-3
+   ax=plt.subplot(gs[n,3:6])
+   ax.set_ylabel('Humidity (%)', labelpad = 0, fontsize = 8)
+   ax.plot(data[f"Sensor {i-2}"]["humidity"])
+   ax.set_xticks(range(0,577,144), ['Dec 10',' ','Dec 11',' ','Dec 12'])
+   ax.title.set_text(f'Sensor {i-2} Humidity')
+   
+plt.tight_layout()
+plt.legend()
+plt.show()
+```
+
+**Temperature**
+```.pycon
+mean_temp = [(a+b+c+d) / 4 for a,b,c,d in zip(data["Sensor 1"]["temp"],data["Sensor 2"]["temp"],data["Sensor 3"]["temp"],data["Sensor 4"]["temp"])]
+fig, ax = plt.subplots(figsize=(18, 5))
+fig = plt.figure(figsize = ([12,6]))
+gs = gridspec.GridSpec(4,7)
+gs.update(wspace=1.5,hspace=0.7)
+
+ax1 = plt.subplot(gs[0:2,0:3])
+ax1.set_ylabel('Temperature (°C)', labelpad = 0, fontsize = 8)
+ax1.plot(mean_temp)
+ax1.title.set_text('Mean Temperature of 4 sensors')
+ax1.set_xticks(range(0,577,144), ['Dec 10',' ','Dec 11',' ','Dec 12'])
+
+ax2 = plt.subplot(gs[2:4,0:3])
+ax2.set_ylabel('Temperature (°C)', labelpad = 0, fontsize = 8)
+ax2.title.set_text('Humidity of 4 sensors')
+for k in data.keys():
+    ax2.plot(data[f"{k}"]["temp"],label=f"{k}",alpha=0.5)
+ax2.set_xticks(range(0,577,144), ['Dec 10',' ','Dec 11',' ','Dec 12'])
+
+for i in range(3,6):
+   n=i-3
+   ax=plt.subplot(gs[n,3:6])
+   ax.set_ylabel('Temperature (°C)', labelpad = 0, fontsize = 8)
+   ax.plot(data[f"Sensor {i-2}"]["temp"])
+   ax.set_xticks(range(0,577,144), ['Dec 10',' ','Dec 11',' ','Dec 12'])
+   ax.title.set_text(f'Sensor {i-2} Temperature')
+plt.tight_layout()
+plt.legend()
+plt.show()
 ```
 
 ### Standard Deviation Errorbar Plot
@@ -350,10 +415,10 @@ By Analizing the graphs plotted it can be said that:
 
 **Fig 14.** The following image present a graph for the mean of the humidity in the remote server server during the 48 hour data collection period.
 
-By Analizing the graphs plotted it can be said that:
+By Analyzing the graphs plotted it can be said that:
 - The value for the median is 33%.
 
-## Compariosn between Local and Remote servers
+## Comparison between Local and Remote servers
 
 ### OUTDOOR VS. INDOOR AVERAGE TEMPERATURE AND HUMIDITY
 
