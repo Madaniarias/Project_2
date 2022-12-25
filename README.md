@@ -261,12 +261,15 @@ for sample in readings:
 ```
 
 ### 4 Local Sensor Plots - Individual & Mean Plots
+We wanted to plot 48 hours of raw data as this directly gives you flexibility in analyzing it. For easy comparison, we plot the data using grids. This grid figure contains 6 plots - 4 plots for each sensor, a plot with all 4 sensors, and a plot of the average of 4 sensors. 
 
+We take the mean humidity and temperature using a one line loop. A for loop is also utilized to create the plots for each four sensors instead of having tens of lines of code just for each plot to have similar features.
 
+The plots for the lines of code below are seen in Figure 8 and Figure 9.
 **Humidity**
 ```.pycon
 
-# GET THE MEAN
+# MEAN FUNCTION
 mean_hum = [(a+b+c+d) / 4 for a,b,c,d in zip(data["Sensor 1"]["humidity"],data["Sensor 2"]["humidity"],data["Sensor 3"]["humidity"],data["Sensor 4"]["humidity"])]
 
 #-----PLOTS-----
